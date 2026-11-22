@@ -187,7 +187,7 @@ export default function Footer() {
         <div className="border-t border-white/10 py-6">
           <div className="flex flex-col items-center justify-between gap-5 sm:flex-row">
             <p className="text-center text-xs text-white/45 sm:text-left">
-              © {new Date().getFullYear()} Laukinis rąstas. Visos teisės saugomos.
+             © 2026 Laukinis rąstas. Visos teisės saugomos.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6">
