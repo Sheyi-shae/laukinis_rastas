@@ -1,26 +1,281 @@
+
+
 @import "tailwindcss";
+@import "../app/css/main.css";
+
+/* =========================================
+   1. BRAND DESIGN TOKENS
+========================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand colours */
+  --color-primary: #2F4A3B;
+  --color-primary-dark: #243A2F;
+  --color-secondary: #788C6A;
+
+  /* Natural accents */
+  --color-beige: #D9C9B1;
+  --color-wood: #B8875B;
+
+  /* Backgrounds */
+  --color-background: #F7F5EE;
+  --color-background-alt: #F0EDE4;
+  --color-surface: #FFFFFF;
+
+  /* Text colours */
+  --color-heading: #262626;
+  --color-text: #404040;
+  --color-muted: #6B6F76;
+  --color-text-light: #FFFFFF;
+
+  /* Borders and effects */
+  --color-border: #E5E0D5;
+  --color-border-dark: rgba(47, 74, 59, 0.15);
+
+  /* Typography */
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+
+
+
+  /* Layout */
+  --container-width: 1440px;
+  --section-padding: 100px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.10);
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+  --transition-smooth: 500ms ease;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================================
+   2. GLOBAL RESET
+========================================= */
+
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background: var(--color-background);
+
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+
+/* =========================================
+   3. TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 5vw, 4.75rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  letter-spacing: -0.025em;
+}
+
+
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+
+/* =========================================
+   4. REUSABLE LAYOUT
+========================================= */
+
+.container {
+  width: min(100% - 10%, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-wood);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   5. REUSABLE BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 25px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition: var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+
+/* =========================================
+   6. SURFACES & CARDS
+========================================= */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.bg-primary {
+  background: var(--color-primary);
+}
+
+.bg-secondary {
+  background: var(--color-secondary);
+}
+
+.bg-ivory {
+  background: var(--color-background);
+}
+
+.bg-beige {
+  background: var(--color-beige);
+}
+
+
+/* =========================================
+   7. ACCESSIBILITY & RESPONSIVENESS
+========================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-wood);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 65px;
+  }
+
+  .container {
+    width: min(100% - 40px, var(--container-width));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
