@@ -94,9 +94,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="mb-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
+           <p className="mb-7 text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
               Navigacija
-            </h4>
+            </p>
 
             <ul className="space-y-4">
               {navigation.map((item) => (
@@ -115,9 +115,9 @@ export default function Footer() {
 
           {/* Building categories */}
           <div>
-            <h4 className="mb-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
+            <p className="mb-7 text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
               Mūsų statiniai
-            </h4>
+            </p>
 
             <ul className="space-y-4">
               {categories.map((item) => (
@@ -144,9 +144,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-7 text-xs font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
+            <p className="mb-7 text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-[#B8875B]">
               Susisiekime
-            </h4>
+            </p>
 
             <p className="mb-6 text-sm leading-7 text-white/65">
               Turite idėją savo būsimam namui? Pasikalbėkime apie jūsų projektą.
