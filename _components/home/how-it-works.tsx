@@ -90,7 +90,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="relative overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 "
     >
       {/* Subtle decorative wood-inspired detail */}
       <div
@@ -284,12 +284,13 @@ export default function HowItWorks() {
         </div>
 
         {/* Bottom CTA */}
+
 <motion.div
   initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true, amount: 0.3 }}
   transition={{ duration: 0.7 }}
-  className="relative isolate mt-24 overflow-hidden px-6 py-16 sm:px-12 sm:py-20 lg:mt-32 lg:px-20"
+  className="relative isolate mt-24 flex min-h-[440px] items-center justify-center overflow-hidden px-6 py-20 text-center sm:px-12 sm:py-24 lg:mt-32 lg:min-h-[500px] lg:px-20"
 >
   {/* Background image */}
   <Image
@@ -301,50 +302,53 @@ export default function HowItWorks() {
   />
 
   {/* Dark overlay */}
-  <div className="absolute inset-0 -z-10 bg-[#1D3026]/6]35" />
+  <div className="absolute inset-0 -z-10 bg-[#1D3026]/55" />
 
-  {/* Subtle gradient for depth */}
-  <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1D3026]/70 via-[#1D3026]/55 to-[#1D3026]/35" />
+  {/* Gradient overlay */}
+  <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#1D3026]/35 via-[#1D3026]/45 to-[#1D3026]/75" />
 
   {/* Decorative circles */}
   <div
     aria-hidden="true"
-    className="pointer-events-none absolute -right-20 -top-32 -z-0 h-72 w-72 rounded-full border border-white/15 sm:h-96 sm:w-96"
+    className="pointer-events-none absolute -right-24 -top-32 -z-0 h-72 w-72 rounded-full border border-white/15 sm:h-96 sm:w-96"
   />
   <div
     aria-hidden="true"
-    className="pointer-events-none absolute -right-10 -top-20 -z-0 h-56 w-56 rounded-full border border-white/10 sm:h-72 sm:w-72"
+    className="pointer-events-none absolute -bottom-36 -left-24 -z-0 h-72 w-72 rounded-full border border-white/10 sm:h-96 sm:w-96"
   />
 
-  {/* Content */}
-  <div className="relative z-10 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-    <div className="max-w-2xl">
-      <span className="text-xs font-semibold tracking-[0.2em] text-[#D9C9B1]">
-        PRADĖKIME KARTU
+  {/* Centered content */}
+  <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center">
+    <span className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.25em] text-[#D9C9B1]">
+      <span className="h-px w-8 bg-[#D9C9B1]" />
+      PRADĖKIME KARTU
+      <span className="h-px w-8 bg-[#D9C9B1]" />
+    </span>
+
+    <h2 className="mt-7 font-heading text-3xl font-semibold leading-[1.15] text-white sm:text-4xl lg:text-6xl">
+      Tavo svajonių namas prasideda{" "}
+      <span className="font-serif font-normal italic text-[#D9C9B1]">
+        nuo pokalbio.
       </span>
+    </h2>
 
-      <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-        Tavo svajonių namas prasideda nuo pokalbio.
-      </h2>
-
-      <p className="mt-5 max-w-xl text-sm leading-7 text-white/80 sm:text-base">
-        Papasakok mums savo idėją – padėsime ją paversti individualiu
-        rąstinio namo projektu.
-      </p>
-    </div>
+    <p className="mx-auto mt-6 max-w-2xl text-sm leading-8 text-white/80 sm:text-base">
+      Papasakok mums savo idėją – padėsime ją paversti individualiu
+      rąstinio namo projektu.
+    </p>
 
     <Link
       href="/kontaktai"
-      className="group inline-flex shrink-0 items-center gap-4 bg-[#D9C9B1] px-7 py-4 text-sm font-semibold text-[#243A2F] transition-all duration-300 hover:bg-white"
+      className="group mt-9 inline-flex min-h-[58px] items-center justify-center gap-5 bg-[#D9C9B1] px-8 py-4 text-sm font-semibold text-[#243A2F] transition-all duration-300 hover:bg-white"
     >
       Gauti nemokamą konsultaciją
-      <ArrowRight
-        size={18}
-        className="transition-transform duration-300 group-hover:translate-x-1"
-      />
+      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#243A2F]/10 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-[#243A2F] group-hover:text-white">
+        <ArrowRight size={17} />
+      </span>
     </Link>
   </div>
 </motion.div>
+
       </div>
     </section>
   );

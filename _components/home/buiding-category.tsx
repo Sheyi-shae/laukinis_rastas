@@ -155,7 +155,7 @@ const imageReveal = {
         </motion.div>
 
         {/* Category cards */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {categories.map((category, index) => (
             <motion.article
               key={category.number}
@@ -164,9 +164,7 @@ const imageReveal = {
               initial={shouldReduceMotion ? false : "hidden"}
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              className={`group relative isolate min-h-[260px] overflow-hidden rounded-[13px] bg-[#283328] sm:min-h-[290px] lg:min-h-[310px] ${
-                index === 2 ? "md:col-span-2" : ""
-              }`}
+              className={`group relative isolate min-h-[310px] overflow-hidden rounded-[13px] bg-[#283328] sm:min-h-[350px] lg:min-h-[430px]`}
             >
               {/* Background image */}
               <Image
@@ -175,9 +173,7 @@ const imageReveal = {
                 fill
                 priority={index === 0}
                 sizes={
-                  index === 2
-                    ? "(max-width: 768px) 100vw, 90vw"
-                    : "(max-width: 768px) 100vw, 45vw"
+                  "(max-width: 768px) 100vw, 45vw"
                 }
                 className={`object-cover transition-transform duration-[1200ms] ease-out ${
                   shouldReduceMotion ? "" : "group-hover:scale-[1.06]"
@@ -191,24 +187,24 @@ const imageReveal = {
               <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
 
               {/* Card content */}
-              <div className="relative z-10 flex h-full min-h-[260px] flex-col justify-center px-7 py-9 sm:min-h-[290px] sm:px-9 lg:min-h-[310px] lg:px-10">
-                      <div className={`${index===2 ? "max-w-[95%] sm:max-w-[78%] lg:max-w-[58%]" :"max-w-[95%] sm:max-w-[98%] lg:max-w-[98%]"}`}>
+              <div className="relative z-10 flex h-full min-h-[310px] flex-col justify-center px-7 py-9 sm:min-h-[350px] sm:px-9 lg:min-h-[430px] lg:px-10">
+                      <div className={"max-w-[99%] sm:max-w-[98%] lg:max-w-[98%]"}>
                   {/* Category label */}
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D9A66C] sm:text-[11px]">
+                    <span className="absolute top-8 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D9A66C] sm:text-[11px]">
                       {category.label}
                     </span>
 
-                    <span className="h-px w-12 bg-[#D9A66C]/70" />
+                    
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-2xl font-medium leading-tight tracking-[-0.025em] text-white sm:text-3xl lg:text-[34px]">
+                  <h3 className="font-serif text-2xl min-h-0 md:min-h-0 font-medium leading-tight tracking-[-0.025em] text-white sm:text-3xl lg:text-[34px]">
                     {category.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-3 w-full text-justify text-xs leading-6 text-white/90 sm:text-base sm:leading-6">
+                  <p className="mt-7 w-full text-justify text-xs leading-6 text-white/90 sm:text-base  sm:leading-6">
                     {category.description}
                   </p>
                 </div>

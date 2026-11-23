@@ -52,7 +52,7 @@ export default function Hero() {
   return (
     <main className="wooden-home-page">
       {/* HERO */}
-      <section className="wooden-hero">
+      <section className="wooden-hero ">
 
         {/* Background image */}
         <div className="hero-image">
@@ -89,7 +89,7 @@ export default function Hero() {
        
 
         {/* HERO CONTENT */}
-        <div className="hero-content">
+        <div className="hero-content mt-8">
 
           <motion.div
             className="hero-copy"
@@ -138,7 +138,7 @@ export default function Hero() {
 
               return (
                 <div className="hero-feature" key={feature.title}>
-                  <Icon size={27} strokeWidth={1} />
+                 
 
                   <div>
                     <strong>{feature.title}</strong>

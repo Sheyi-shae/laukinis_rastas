@@ -176,7 +176,7 @@ export default function WhyChooseUs() {
                 </h4>
 
                 {/* Description */}
-                <p className="mt-4 text-sm sm:text-base text-justify leading-[1.85] text-[#6B6F76]">
+                <p className="mt-4 text-sm sm:text-base text-justify leading-[1.85] text-slate-800">
                   {item.description}
                 </p>
 
@@ -193,10 +193,10 @@ export default function WhyChooseUs() {
                 )}
 
                 {/* Bottom hover detail */}
-                <div className="mt-7 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#788C6A] opacity-70 transition-all duration-300 group-hover:gap-3 group-hover:opacity-100">
+                <span className="mt-7 flex items-center gap-2 text-xs  font-bold uppercase tracking-[0.16em] text-[#788C6A]   transition-all duration-300 group-hover:gap-3 group-hover:opacity-100">
                   Mūsų įsipareigojimas
-                  <ArrowUpRight size={14} strokeWidth={1.7} />
-                </div>
+                  <ArrowUpRight size={14} strokeWidth={1} />
+                </span>
               </motion.article>
             );
           })}

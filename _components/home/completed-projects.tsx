@@ -82,11 +82,7 @@ export default function CompletedProjects() {
             ir individualūs sprendimai.
           </p>
 
-          {/* <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#404040] sm:text-base">
-            Kiekvienas „Laukinio rąsto“ namas kuriamas individualiai.
-            Kruopščiai atrenkame medieną, rankomis formuojame kiekvieną rąstą
-            ir surenkame konstrukciją, kuri tarnaus ateities kartoms.
-          </p> */}
+         
 
           
         </motion.div>
@@ -121,7 +117,7 @@ export default function CompletedProjects() {
               />
 
               {/* Image overlay */}
-             <div className="absolute inset-0 bg-gradient-to-t from-[#14231B]/65 via-[#14231B]/5 to-transparent" />
+             <div className="absolute inset-0 bg-gradient-to-t from-[#14231B]/95 via-transparent to-[#14231B]/95 " />
               {/* Top project number */}
               <div className="absolute left-6 top-6 z-10 flex items-center gap-3">
                 <span className="font-serif text-3xl text-white">

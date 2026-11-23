@@ -57,12 +57,10 @@ export default function Footer() {
               <span className="font-serif text-3xl font-semibold tracking-tight text-white">
                 Laukinis rąstas
               </span>
-              <span className="mt-1 text-[9px] font-medium uppercase tracking-[0.32em] text-[#B8875B]">
-                Natūrali meistrystė
-              </span>
+              
             </Link>
 
-            <p className="mt-7 text-sm leading-8 text-white/65">
+            <p className="mt-6 text-sm leading-8 text-white/65">
               Kuriame išskirtinius rąstinius namus iš Karpatų kalnų eglės,
               derindami kanadietišką „laukinio rąsto“ technologiją,
               natūralų medienos grožį ir ilgametę meistrystę.

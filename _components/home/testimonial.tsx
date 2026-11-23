@@ -120,7 +120,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="max-w-md text-base leading-8 text-[#6B6F76] lg:pb-1"
+            className="hidden md:block absolute right-10 max-w-md text-base top-36 leading-8 text-slate-700 lg:pb-1"
           >
             O geriausias jų įvertinimas – klientų pasitikėjimas ir
             rekomendacijos.
