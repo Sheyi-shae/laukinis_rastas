@@ -176,15 +176,7 @@ export default function Navbar() {
       >
         <div className="mx-auto w-[90%] max-w-[600px] pb-7 pt-5">
 
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#80664C]">
-              Navigation
-            </span>
-
-            <span className="text-[10px] tracking-[1px] text-[#8A8F89]">
-              Explore Wooden Homes
-            </span>
-          </div>
+         
 
           <nav aria-label="Mobile navigation" className="flex flex-col">
             {navigation.map((item, index) => (
@@ -200,10 +192,7 @@ export default function Navbar() {
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <span className="text-[10px] font-medium text-[#B8875B]">
-                    0{index + 1}
-                  </span>
-
+                 
                   <span className="text-[15px] font-medium">
                     {item.label}
                   </span>
@@ -225,8 +214,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <Link
-            href="/contact"
+          <button 
+           
             onClick={() => setMenuOpen(false)}
             className="group mt-6 flex w-full items-center justify-between rounded-full bg-[#2F4A3B] px-6 py-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#243A2F]"
           >
@@ -236,7 +225,7 @@ export default function Navbar() {
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-1"
             />
-          </Link>
+          </button>
 
           <p className="mt-5 text-center text-[10px] tracking-[1.5px] text-[#8A8F89]">
             NATURAL · MODERN · LASTING
