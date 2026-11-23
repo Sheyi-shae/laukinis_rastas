@@ -54,8 +54,8 @@
   );
   clip-path: polygon(
     0 0,
-    60% 0,
-    45% 100%,
+    48% 0,
+    48% 100%,
     0 100%
   );
 }
@@ -300,7 +300,7 @@
 .hero-features {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 35px;
   width: fit-content;
   margin-top: 70px;
   padding-top: 27px;
@@ -310,7 +310,7 @@
 .hero-feature {
   display: flex;
   align-items: center;
-  gap: 13px;
+  gap: 20px;
   padding-right: 24px;
   border-right: 1px solid rgba(47, 74, 59, 0.2);
   color: #8b7455;
@@ -328,14 +328,14 @@
 
 .hero-feature strong {
   color: #293d34;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 .hero-feature span {
   color: #5b5b54;
-  font-size: 11px;
+  font-size: 14px;
   white-space: nowrap;
 }
 

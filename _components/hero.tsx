@@ -98,7 +98,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="hero-eyebrow">
-              <span />
+              
               LAUKINIS RĄSTAS | NATŪRALŪS RĄSTINIAI NAMAI
             </div>
 
@@ -134,8 +134,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {features.map((feature) => {
-              const Icon = feature.icon;
-
+              
               return (
                 <div className="hero-feature" key={feature.title}>
                  
