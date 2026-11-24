@@ -81,7 +81,6 @@ export default function NaturalMicroclimate() {
           className="mb-12 max-w-3xl sm:mb-16 lg:mb-20"
         >
           <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
               Natūralus komfortas
             </span>
@@ -164,18 +163,13 @@ export default function NaturalMicroclimate() {
                   </div>
 
                   <div>
-                    <div className="mb-2 flex items-center gap-3">
-                      <span className="text-[10px] font-semibold tracking-[0.18em] text-[#B8875B]">
-                        {benefit.number}
-                      </span>
-                      <span className="h-px w-6 bg-[#B8875B]/50" />
-                    </div>
+                    
 
                     <h3 className="font-serif text-xl text-[#262626] sm:text-2xl">
                       {benefit.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-7 text-[#6B6F76] sm:text-base sm:leading-8">
+                    <p className="mt-3 text-justify text-sm leading-7 text-[#6B6F76] sm:text-base sm:leading-8">
                       {benefit.description}
                     </p>
                   </div>

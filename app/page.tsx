@@ -9,7 +9,6 @@ import WhyChooseUs from "@/_components/home/why-choose-us";
 export default function Home() {
   return (
     <div>
-      <LaukinisHero/>
     <Hero />
       <BuildingCategories />
       <WhyChooseUs />

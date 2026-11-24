@@ -110,11 +110,9 @@ export default function TechnologyAdvantages() {
           className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B59F]">
               Kodėl ši technologija?
             </span>
-            <span className="h-px w-9 bg-[#B8875B]" />
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
@@ -153,16 +151,16 @@ export default function TechnologyAdvantages() {
                     <Icon size={20} strokeWidth={1.5} />
                   </div>
 
-                  <span className="font-serif text-sm text-white/35">
+                  <span className="font-serif text-[0px] text-white/35">
                     {advantage.number}
                   </span>
                 </div>
 
-                <h3 className="mt-6 font-serif text-xl leading-snug text-white sm:text-2xl">
+                <h3 className="min-h-4 md:min-h-20 font-serif text-lg leading-snug text-white sm:text-xl">
                   {advantage.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-white/60">
+                <p className="mt-3 text-sm text-justify leading-7 text-white/60">
                   {advantage.description}
                 </p>
               </motion.article>
@@ -171,55 +169,103 @@ export default function TechnologyAdvantages() {
         </motion.div>
 
         {/* Architectural image and closing statement */}
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8 }}
-          className="relative mt-20 overflow-hidden sm:mt-24 lg:mt-32"
+        
+<motion.div
+  initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+  className="relative mt-20 overflow-hidden sm:mt-24 lg:mt-32"
+>
+  <div className="relative flex min-h-[500px] items-center justify-center sm:min-h-[560px] lg:min-h-[600px]">
+
+    {/* Background image */}
+    <Image
+      src="/images/technology/tech4.jpeg"
+      alt="Individualios architektūros rąstinis namas iš natūralių masyvių rąstų"
+      fill
+      sizes="100vw"
+      className="object-cover object-center"
+    />
+
+    {/* Dark cinematic overlay */}
+    <div className="absolute inset-0 bg-[#14221A]/65" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#14221A]/30 via-[#14221A]/35 to-[#14221A]/80" />
+
+    {/* Content */}
+    <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-6 py-20 text-center sm:px-10 lg:py-28">
+
+      {/* Eyebrow */}
+      <motion.div
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+        className="mb-8 flex items-center justify-center gap-4"
+      >
+        
+
+        <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#E8D5BB] sm:text-xs">
+          Jūsų vizija. Mūsų meistrystė.
+        </span>
+
+        
+      </motion.div>
+
+      {/* Heading */}
+      <motion.h3
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.25 }}
+        className="max-w-4xl font-serif text-4xl font-medium leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-7xl"
+      >
+        Kiekvienas namas prasideda
+        <br className="hidden sm:block" />
+        nuo{" "}
+        <span className="italic text-[#E6CBA9]">
+          individualios idėjos.
+        </span>
+      </motion.h3>
+
+      {/* Description */}
+      <motion.p
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.35 }}
+        className="mt-8 max-w-2xl text-base font-medium leading-8 text-white/95 sm:text-lg sm:leading-9"
+      >
+        Nesvarbu, ar svajojate apie jaukų šeimos namą, poilsio
+        sodybą ar išskirtinę pirtį – kartu aptarsime jūsų poreikius
+        ir padėsime pasirinkti tinkamiausius sprendimus.
+      </motion.p>
+
+      {/* CTA Button */}
+      <motion.div
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.45 }}
+        className="mt-10"
+      >
+        <Link
+          href="/kontaktai"
+          className="group inline-flex items-center justify-center gap-4 rounded-full bg-[#E6CBA9] px-9 py-5 text-sm font-bold text-[#243A2F] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-2xl sm:px-11 sm:py-[22px] sm:text-base"
         >
-          <div className="relative min-h-[420px] sm:min-h-[460px] lg:min-h-[500px]">
-            <Image
-              src="/images/technology/tech4.jpeg"
-              alt="Individualios architektūros rąstinis namas iš natūralių masyvių rąstų"
-              fill
-              sizes="100vw"
-              className="object-cover"
-            />
+          Aptarkime jūsų projektą
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#17251D]/95 via-[#17251D]/75 to-[#17251D]/15" />
+          <ArrowUpRight
+            size={19}
+            className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+          />
+        </Link>
+      </motion.div>
 
-            <div className="relative z-10 flex min-h-[420px] max-w-2xl flex-col justify-center px-7 py-14 sm:min-h-[460px] sm:px-12 lg:min-h-[500px] lg:px-16">
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-9 bg-[#B8875B]" />
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#D9C9B1]">
-                  Jūsų vizija. Mūsų meistrystė.
-                </span>
-              </div>
+    </div>
+  </div>
+</motion.div>
 
-              <h3 className="font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
-                Kiekvienas namas prasideda nuo individualios idėjos.
-              </h3>
-
-              <p className="mt-6 max-w-lg text-sm leading-8 text-white/75 sm:text-base">
-                Nesvarbu, ar svajojate apie jaukų šeimos namą, poilsio
-                sodybą ar išskirtinę pirtį – kartu aptarsime jūsų poreikius
-                ir padėsime pasirinkti tinkamiausius sprendimus.
-              </p>
-
-              <Link
-                href="/kontaktai"
-                className="group mt-8 inline-flex w-fit items-center gap-3 bg-[#D9C9B1] px-6 py-4 text-sm font-semibold text-[#243A2F] transition-colors duration-300 hover:bg-white"
-              >
-                Aptarkime jūsų projektą
-                <ArrowUpRight
-                  size={17}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

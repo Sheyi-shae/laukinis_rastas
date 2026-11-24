@@ -71,7 +71,7 @@ export default function WoodPreparation() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#F0EDE4] py-20 sm:py-24 lg:py-32">
+    <section id="medienos-paruosimas" className="relative overflow-hidden bg-[#F0EDE4] py-20 sm:py-24 lg:py-32">
       <div className="container">
         {/* Section heading */}
         <motion.div
@@ -82,11 +82,11 @@ export default function WoodPreparation() {
           className="mx-auto max-w-3xl text-center"
         >
           <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
+           
             <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
               Gamybos procesas
             </span>
-            <span className="h-px w-9 bg-[#B8875B]" />
+           
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.15] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
@@ -186,7 +186,6 @@ export default function WoodPreparation() {
                   </span>
 
                   <div className="mt-5 flex items-center gap-3">
-                    <span className="h-px w-8 bg-[#B8875B]" />
                     <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
                       Gamybos etapas
                     </span>
@@ -196,7 +195,7 @@ export default function WoodPreparation() {
                     {stage.title}
                   </h3>
 
-                  <h4 className="mt-3 text-sm font-semibold text-[#2F4A3B] sm:text-base">
+                  <h4 className="mt-3 text-sm text-justify font-semibold text-[#2F4A3B] sm:text-base">
                     {stage.subtitle}
                   </h4>
 

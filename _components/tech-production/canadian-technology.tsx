@@ -80,13 +80,13 @@ export default function CanadianTechnology() {
           className="mx-auto max-w-4xl text-center"
         >
           <div className="mb-7 flex items-center justify-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
+            
 
             <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#D9C9B1] sm:text-xs">
               Tradicija ir meistrystė
             </span>
 
-            <span className="h-px w-9 bg-[#B8875B]" />
+            
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
@@ -153,7 +153,7 @@ export default function CanadianTechnology() {
               Ne standartizuota forma, o natūralus medžio charakteris.
             </h3>
 
-            <div className="mt-7 space-y-5 text-sm leading-8 text-white/70 sm:text-base sm:leading-9">
+            <div className="mt-7 text-justify space-y-5 text-sm leading-8 text-white/70 sm:text-base sm:leading-9">
               <p>
                 Skirtingai nei standartizuotų tekintų rąstų
                 statyboje, „laukinio rąsto“ technologijoje
@@ -204,7 +204,7 @@ export default function CanadianTechnology() {
               Tiksliai suformuotos jungtys.
             </h3>
 
-            <p className="mt-5 text-sm leading-8 text-white/65 sm:text-base sm:leading-9">
+            <p className="mt-5 text-sm leading-8 text-justify text-white/65 sm:text-base sm:leading-9">
               Išilginės įlaidos ir kampinės jungtys formuojamos
               pagal konkrečių rąstų formas. Būtent tokios detalės
               reikalauja daugiausia meistrų patirties ir kruopštumo.
@@ -260,23 +260,13 @@ export default function CanadianTechnology() {
                   variants={reveal}
                   className="group relative bg-[#243A2F] px-6 py-8 transition-colors duration-500 hover:bg-[#2F4A3B] sm:px-7 sm:py-10"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="font-serif text-sm text-[#B8875B]">
-                      {feature.number}
-                    </span>
+                 
 
-                    <Icon
-                      size={21}
-                      strokeWidth={1.4}
-                      className="text-[#D9C9B1] transition-transform duration-500 group-hover:-translate-y-1 group-hover:translate-x-1"
-                    />
-                  </div>
-
-                  <h4 className="mt-10 font-serif text-xl text-[#F7F5EE] sm:text-2xl">
+                  <h4 className="mt-10 min-h-0 sm:min-h-16 font-serif text-xl text-[#F7F5EE] sm:text-2xl">
                     {feature.title}
                   </h4>
 
-                  <p className="mt-4 text-sm leading-7 text-white/60">
+                  <p className="mt-4 text-justify text-sm leading-7 text-white/60">
                     {feature.description}
                   </p>
 

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -6,27 +5,42 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   ArrowRight,
+  ArrowUpRight,
   ChevronDown,
   Menu,
   X,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
-const navigation = [
+type NavItem = {
+  label: string;
+  href: string;
+  dropdown?: boolean;
+  dropdownItem?: { label: string; href: string }[];
+};
 
+const navigation: NavItem[] = [
+  { label: "Namai ir statiniai", href: "namai-ir-statiniai" },
 
-  { label: "Namai ir pastatai", href: "#" },
+  { label: "Įgyvendinti projektai", href: "#" },
 
-{ label: "Įgyvendinti projektaiv", href: "#" },
+  {
+    label: "Technologijos ir gamyba",
+    href: "/technologija-ir-gamyba",
+    dropdown: true,
+    dropdownItem: [
+      { label: "Medienos paruošimas", href: "/technologija-ir-gamyba#medienos-paruosimas" },
+      { label: "Kanadietiska technologija", href: "/technologija-ir-gamyba#kanadietiska-technologija" },
+      { label: "Siluminis komfortas", href: "/technologija-ir-gamyba#siluminis-komfortas" },
+      { label: "Natūralus mikroklimatas“ technologija", href: "/technologija-ir-gamyba#naturalus-mikroklimatas" },
+      { label: "Meistryste ir patirtis", href: "/technologija-ir-gamyba#meistryste-ir-patirtis" },
+    ],
+  },
 
-{ label: "Technologijos ir gamyba", href: "#", dropdown: true },
+  { label: "Apie mus", href: "/apie-mus" },
 
-{ label: "Apie mus", href: "#" },
-
-{ label: "Kontaktai", href: "#" },
- 
+  { label: "Kontaktai", href: "/kontaktai" },
 ];
-
-
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -69,8 +83,8 @@ export default function Navbar() {
           : "border-transparent bg-transparent shadow-none"
       }`}
     >
-          <div className="container relative flex h-full items-center justify-between">
-              {/* LOGO - LEFT */}
+      <div className="container relative flex h-full items-center justify-between">
+        {/* LOGO - LEFT */}
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -97,8 +111,6 @@ export default function Navbar() {
               strokeLinejoin="round"
             />
           </svg>
-
-          
         </Link>
 
         {/* DESKTOP NAVIGATION - CENTER */}
@@ -107,48 +119,114 @@ export default function Navbar() {
           className="absolute left-[45%] hidden -translate-x-1/2 items-center gap-5 lg:flex xl:gap-7"
         >
           {navigation.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`group relative flex items-center gap-1 whitespace-nowrap py-3 text-[12px]  transition-colors duration-300 xl:text-[16px] font-medium ${
-                isActive(item.href)
-                  ? "text-[#2F4A3B]"
-                  : "text-[#454B46] hover:text-[#2F4A3B]"
-              }`}
-            >
-              {item.label}
-
-              {item.dropdown && (
-                <ChevronDown
-                  size={14}
-                  className="transition-transform duration-300 group-hover:rotate-180"
-                />
-              )}
-
-              <span
-                className={`absolute bottom-[3px] left-0 h-[2px] rounded-full bg-[#2F4A3B] transition-all duration-300 ${
+         
+            <span key={item.label} className="group/item relative">
+              <Link
+                href={item.href}
+                className={`relative flex items-center tracking-wide font-medium gap-1 whitespace-nowrap py-3 text-[12px] transition-colors duration-300 xl:text-[16px] ${
                   isActive(item.href)
-                    ? "w-full"
-                    : "w-0 group-hover:w-full"
+                    ? "text-[#2F4A3B]"
+                    : "text-[#454B46] group-hover/item:text-[#2F4A3B]"
                 }`}
-              />
-            </Link>
+              >
+                {item.label}
+
+                {item.dropdown && (
+                  <ChevronDown
+                    size={14}
+                    className="transition-transform duration-300 group-focus-within/item:rotate-180 group-hover/item:rotate-180"
+                  />
+                )}
+
+                <span
+                  className={`absolute bottom-[3px] left-0 h-[2px] rounded-full bg-[#2F4A3B] transition-all duration-300 ${
+                    isActive(item.href)
+                      ? "w-full"
+                      : "w-0 group-hover/item:w-full"
+                  }`}
+                />
+              </Link>
+
+              {/* DROPDOWN PANEL */}
+              {item.dropdown && item.dropdownItem && (
+                <div
+                  className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-300 ease-out group-focus-within/item:visible group-focus-within/item:translate-y-0 group-focus-within/item:opacity-100 group-hover/item:visible group-hover/item:translate-y-0 group-hover/item:opacity-100"
+                >
+                  <div className="relative min-w-[250px] rounded-2xl border border-[#2F4A3B]/10 bg-[#F7F5EE] p-2 shadow-[0_20px_50px_rgba(23,39,31,0.14)]">
+                    {/* little pointer notch */}
+                    <span
+                      aria-hidden
+                      className="absolute -top-[6px] left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 rounded-[2px] border-l border-t border-[#2F4A3B]/10 bg-[#F7F5EE]"
+                    />
+
+                    <ul className="relative">
+                      {item.dropdownItem.map((sub) => (
+                        <li key={sub.label}>
+                          <Link
+                            href={sub.href}
+                            className={`group/sub flex items-center justify-between gap-6 rounded-xl px-4 py-3 text-[14px] transition-colors duration-200 hover:bg-[#2F4A3B]/[0.06] ${
+                              isActive(sub.href) && sub.href !== "#"
+                                ? "text-[#2F4A3B]"
+                                : "text-[#454B46] hover:text-[#2F4A3B]"
+                            }`}
+                          >
+                            <span>{sub.label}</span>
+                            <ArrowUpRight
+                              size={15}
+                              className="-translate-x-1 translate-y-1 text-[#B8875B] opacity-0 transition-all duration-300 group-hover/sub:translate-x-0 group-hover/sub:translate-y-0 group-hover/sub:opacity-100"
+                            />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </span>
           ))}
         </nav>
 
         {/* DESKTOP CTA - RIGHT */}
         <div className="ml-auto hidden lg:block">
-          <button
-            
-            className="btn btn-primary "
+          <motion.a
+            href="#contact"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
+            className="group relative hidden items-center gap-4 overflow-hidden  border border-[#D9C9B1]/35 bg-[#2F4A3B] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.19em] text-[#F5F0E7] shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:border-[#D9C9B1]/70 hover:bg-[#2F4A3B]/75 md:flex"
           >
-            Gauti pasiūlymą
+            {/* Focused glass spotlight */}
+            <span className="pointer-events-none absolute -inset-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,201,177,0.28),transparent_65%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
 
-            <ArrowRight
-              size={16}
-              className="transition-transform duration-300 group-hover:translate-x-1"
+            {/* Glass reflection */}
+            <motion.span
+              className="pointer-events-none absolute inset-y-0 -left-full w-1/2 skew-x-[-25deg] bg-gradient-to-r from-transparent via-white/15 to-transparent"
+              animate={{ left: ["-60%", "160%"] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatDelay: 2.5,
+                ease: "easeInOut",
+              }}
             />
-          </button>
+
+            {/* Inner illuminated border */}
+            <span className="pointer-events-none absolute inset-[1px] border border-white/[0.06]" />
+
+            <span className="relative z-10 whitespace-nowrap">
+              Gauti pasiūlymą
+            </span>
+
+            <motion.span
+              className="relative z-10 flex h-7 w-7 items-center justify-center rounded-full border border-[#D9C9B1]/35 bg-[#D9C9B1]/10 text-[#D9C9B1] transition-all duration-500 group-hover:border-[#D9C9B1] group-hover:bg-[#D9C9B1] group-hover:text-[#243A2F]"
+              whileHover={{ rotate: 45 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ArrowUpRight size={15} strokeWidth={1.7} />
+            </motion.span>
+          </motion.a>
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -175,11 +253,8 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto w-[90%] max-w-[600px] pb-7 pt-5">
-
-         
-
           <nav aria-label="Mobile navigation" className="flex flex-col">
-            {navigation.map((item, index) => (
+            {navigation.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
@@ -192,10 +267,7 @@ export default function Navbar() {
                 }`}
               >
                 <div className="flex items-center gap-4">
-                 
-                  <span className="text-[15px] font-medium">
-                    {item.label}
-                  </span>
+                  <span className="text-[15px] font-medium">{item.label}</span>
                 </div>
 
                 {item.dropdown ? (
@@ -214,8 +286,7 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <button 
-           
+          <button
             onClick={() => setMenuOpen(false)}
             className="group mt-6 flex w-full items-center justify-between rounded-full bg-[#2F4A3B] px-6 py-4 text-[14px] font-semibold text-white transition-colors hover:bg-[#243A2F]"
           >
@@ -227,9 +298,7 @@ export default function Navbar() {
             />
           </button>
 
-          <p className="mt-5 text-center text-[10px] tracking-[1.5px] text-[#8A8F89]">
-            NATURAL · MODERN · LASTING
-          </p>
+        
         </div>
       </div>
     </header>

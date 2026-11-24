@@ -65,7 +65,7 @@ export default function TimberOrigin() {
               </span>
             </h2>
 
-            <div className="mt-8 max-w-xl space-y-5 text-sm leading-8 text-[#555B55] sm:text-base sm:leading-9">
+            <div className="mt-8 text-justify max-w-xl space-y-5 text-sm leading-8 text-[#555B55] sm:text-base sm:leading-9">
               <p>
                 Karpatų kalnuose eglės auga lėčiau nei daugelyje žemumų
                 miškų. Dėl sudėtingų augimo sąlygų jų metinės rievės

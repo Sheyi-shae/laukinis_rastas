@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${dmSans.variable}`}>
-        {/* <Navbar/> */}
+        <Navbar/>
         {children}
         <Footer/>
       </body>

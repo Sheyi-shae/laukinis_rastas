@@ -79,15 +79,7 @@ export default function ThermalComfort() {
           variants={reveal}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="mb-6 flex items-center justify-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
-
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
-              Šiluma ir komfortas
-            </span>
-
-            <span className="h-px w-9 bg-[#B8875B]" />
-          </div>
+        
 
           <h2 className="font-serif text-4xl leading-[1.15] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
             Ar rąstinis namas
@@ -120,7 +112,7 @@ export default function ThermalComfort() {
                 src="/images/technology/thermal1.jpg"
                 alt="Jaukus rąstinis namas žiemos aplinkoje"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 120vw, 50vw"
                 className="object-cover"
               />
 
@@ -147,15 +139,13 @@ export default function ThermalComfort() {
             viewport={{ once: true, amount: 0.25 }}
             variants={reveal}
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#788C6A]">
-              Daugiau nei sienų storis
-            </span>
+          
 
             <h3 className="mt-5 font-serif text-3xl leading-tight text-[#262626] sm:text-4xl">
               Mediena turi savybių, kurios prisideda prie komforto.
             </h3>
 
-            <div className="mt-7 space-y-5 text-sm leading-8 text-[#555B55] sm:text-base sm:leading-9">
+            <div className="mt-7 text-justify space-y-5 text-sm leading-8 text-[#555B55] sm:text-base sm:leading-9">
               <p>
                 Mediena pasižymi palyginti mažu šilumos laidumu.
                 Todėl prisilietus prie medinio paviršiaus jis
@@ -178,7 +168,7 @@ export default function ThermalComfort() {
               </p>
             </div>
 
-            <div className="mt-8 flex items-start gap-4 border-l-2 border-[#B8875B] bg-[#F0EDE4] px-5 py-5">
+            <div className="mt-3 flex items-start gap-4 border-l-2 border-[#B8875B] bg-[#F0EDE4] px-5 py-3">
               <Thermometer
                 size={21}
                 className="mt-1 shrink-0 text-[#788C6A]"
@@ -233,18 +223,18 @@ export default function ThermalComfort() {
 
               <div className="relative">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-[#D9C9B1]">
-                  <ShieldCheck size={22} />
+                  <ShieldCheck size={22} strokeWidth={1} />
                 </div>
 
                 <span className="mt-8 block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#D9C9B1]">
-                  01 / Šilumos išsaugojimas
+                  Šilumos išsaugojimas
                 </span>
 
                 <h4 className="mt-3 font-serif text-3xl sm:text-4xl">
                   Šiluminė varža
                 </h4>
 
-                <p className="mt-5 max-w-md text-sm leading-8 text-white/70">
+                <p className="mt-5 max-w-md text-justify text-sm leading-8 text-white/70">
                   Nusako, kaip stipriai konstrukcija priešinasi
                   šilumos perdavimui. Kuo didesnė šiluminė varža,
                   tuo mažiau šilumos perduodama per konstrukciją,
@@ -276,14 +266,14 @@ export default function ThermalComfort() {
                 </div>
 
                 <span className="mt-8 block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
-                  02 / Šilumos kaupimas
+                  Šilumos kaupimas
                 </span>
 
                 <h4 className="mt-3 font-serif text-3xl text-[#262626] sm:text-4xl">
                   Šiluminė talpa
                 </h4>
 
-                <p className="mt-5 max-w-md text-sm leading-8 text-[#555B55]">
+                <p className="mt-5 max-w-md text-sm text-justify leading-8 text-[#555B55]">
                   Nusako, kiek šilumos energijos medžiaga gali
                   sukaupti, kai keičiasi jos temperatūra. Masyvi
                   mediena gali sugerti šilumą ir palaipsniui
@@ -310,9 +300,7 @@ export default function ThermalComfort() {
             variants={reveal}
             className="mb-10 max-w-2xl"
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#788C6A]">
-              Viso pastato sprendimai
-            </span>
+            
 
             <h3 className="mt-4 font-serif text-3xl leading-tight text-[#262626] sm:text-4xl">
               Kas iš tikrųjų lemia namų šilumą?
@@ -350,7 +338,7 @@ export default function ThermalComfort() {
                       <Icon size={19} />
                     </div>
 
-                    <span className="font-serif text-sm text-[#B8875B]">
+                    <span className="font-serif text-[0px] text-white">
                       0{index + 1}
                     </span>
                   </div>

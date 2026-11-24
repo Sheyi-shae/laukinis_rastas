@@ -10,25 +10,25 @@ export default function TechnologyHero() {
   const shouldReduceMotion = useReducedMotion();
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut" as const,
+        duration: 0.9,
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
 
   return (
-    <section className="relative isolate flex min-h-[680px] items-center justify-center overflow-hidden bg-[#243A2F] sm:min-h-[740px] lg:min-h-[800px]">
+    <section className="relative isolate flex min-h-[680px] items-center justify-center overflow-hidden bg-[#243A2F] sm:min-h-[740px] lg:min-h-[820px]">
 
-      {/* Background image */}
+      {/* Background */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/images/technology/technology-hero.jpg"
-          alt="Natūralių rąstų namas, pastatytas naudojant laukinio rąsto technologiją"
+          src="/images/technology/wood.png"
+          alt="Rankomis apdirbami natūralūs rąstai ir medinis namas"
           fill
           priority
           sizes="100vw"
@@ -36,13 +36,14 @@ export default function TechnologyHero() {
         />
       </div>
 
-      {/* Balanced image overlays */}
-      <div className="absolute inset-0 -z-10 bg-[#17271F]/55" />
+      {/* Cinematic overlays */}
+      <div className="absolute inset-0 -z-10 bg-[#17271F]/45" />
 
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#17271F]/40 via-[#17271F]/35 to-[#17271F]/75" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#17271F]/30 via-[#17271F]/30 to-[#17271F]/85" />
 
       {/* Content */}
-      <div className="container relative z-10 flex justify-center py-32 sm:py-36 lg:py-40">
+      <div className="container relative z-10 flex justify-center px-6 py-36 sm:py-40 lg:py-44">
+
         <motion.div
           initial={shouldReduceMotion ? false : "hidden"}
           animate="visible"
@@ -50,81 +51,51 @@ export default function TechnologyHero() {
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.16,
+                delayChildren: 0.15,
               },
             },
           }}
           className="mx-auto flex w-full max-w-5xl flex-col items-center text-center"
         >
 
-          {/* Eyebrow */}
-          <motion.div
-            variants={fadeUp}
-            className="mb-8 flex items-center justify-center gap-4"
-          >
-           
-
-            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#D9C9B1] sm:text-xs">
-              Technologija ir gamyba
-            </span>
-
-          </motion.div>
-
+         
           {/* Heading */}
           <motion.h1
             variants={fadeUp}
-            className="max-w-5xl font-serif text-4xl leading-[1.15] tracking-tight text-[#F7F5EE] sm:text-6xl lg:text-7xl xl:text-[82px]"
+            className="max-w-5xl font-serif text-[42px] leading-[1.12] tracking-tight text-[#F7F5EE] sm:text-6xl lg:text-[76px] xl:text-[84px]"
           >
             Namai, kuriuose
-            <br />
-            susitinka{" "}
-            <span className="italic text-[#D9C9B1]">
-              gamta ir meistrystė.
-            </span>
-          </motion.h1>
+            <br className="hidden sm:block" />
 
-          {/* Decorative divider */}
-          <motion.div
-            variants={fadeUp}
-            className="my-8 h-px w-16 bg-[#D9C9B1]/70"
-          />
+            <span className="italic text-[#D9C9B1]">
+              gamta susitinka su
+            </span>
+
+            <br className="hidden sm:block" />
+
+            meistryste.
+          </motion.h1>
 
           {/* Description */}
           <motion.p
             variants={fadeUp}
-            className="mx-auto max-w-2xl text-sm leading-8 text-white/85 sm:text-base sm:leading-9"
+            className="mt-8 max-w-2xl text-sm leading-8 text-white/85 sm:text-base sm:leading-9"
           >
             Kiekvienas „Laukinio rąsto“ namas prasideda nuo kruopščiai
-            atrinktos Karpatų kalnų eglės. Naudodami kanadietišką
+            atrinktos Karpatų kalnų eglės. Pasitelkdami kanadietišką
             „laukinio rąsto“ technologiją, išsaugome natūralias medienos
             formas ir kiekvieną rąstą individualiai pritaikome būsimo
             namo konstrukcijai.
           </motion.p>
 
-          {/* Buttons */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <Link
-              href="#karpatų-eglė"
-              className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#D9C9B1] px-8 py-4 text-sm font-semibold text-[#243A2F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#F7F5EE] hover:shadow-xl"
-            >
-              Aptarkime jūsų projektą
-
-              <ArrowRight
-                size={17}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-
-           
-          </motion.div>
+         
 
         </motion.div>
       </div>
 
       
+
     </section>
   );
 }

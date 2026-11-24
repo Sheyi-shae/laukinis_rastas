@@ -29,7 +29,7 @@ export default function WorkshopCTA() {
   return (
     <section
       id="aplankykite-dirbtuves"
-      className="relative isolate overflow-hidden bg-[#E9DFD0] py-20 sm:py-24 lg:py-28"
+      className="relative isolate overflow-hidden bg-[#E9DFD0] py-20 "
     >
       {/* Subtle decorative elements */}
       <div
@@ -55,7 +55,6 @@ export default function WorkshopCTA() {
           >
             {/* Eyebrow */}
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-9 bg-[#B8875B]" />
               <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
                 Aplankykite mūsų dirbtuves
               </span>
@@ -149,24 +148,7 @@ export default function WorkshopCTA() {
               </div>
             </div>
 
-            {/* CTA */}
-            <div className="mt-9">
-              <Link
-                href="/kontaktai"
-                className="group inline-flex items-center gap-4 bg-[#2F4A3B] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#243A2F]"
-              >
-                Susitarti dėl apsilankymo
-
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-white/20">
-                  <ArrowUpRight size={17} />
-                </span>
-              </Link>
-
-              <div className="mt-5 flex items-center gap-2 text-xs text-[#81796E]">
-                <CalendarDays size={15} className="text-[#788C6A]" />
-                Apsilankymas suderinamas iš anksto
-              </div>
-            </div>
+            
           </motion.div>
 
           {/* RIGHT COLUMN — GOOGLE MAP */}

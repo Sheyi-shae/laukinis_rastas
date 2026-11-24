@@ -59,7 +59,6 @@ export default function CraftsmanshipExperience() {
           className="mb-12 max-w-3xl sm:mb-16"
         >
           <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-9 bg-[#B8875B]" />
             <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
               Patirtis ir atsakomybė
             </span>
@@ -124,15 +123,13 @@ export default function CraftsmanshipExperience() {
             transition={{ duration: 0.8 }}
             className="lg:py-6"
           >
-            <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full border border-[#788C6A]/30 text-[#2F4A3B]">
-              <Ruler size={22} strokeWidth={1.5} />
-            </div>
+            
 
             <h3 className="font-serif text-2xl leading-snug text-[#262626] sm:text-3xl">
               Tradicija, perduodama per kruopštų darbą.
             </h3>
 
-            <div className="mt-6 space-y-5 text-sm leading-8 text-[#6B6F76] sm:text-base">
+            <div className="mt-6 text-justify space-y-5 text-sm leading-8 text-[#6B6F76] sm:text-base">
               <p>
                 Nuo 2003 metų kuriame rąstinius namus, kuriuose natūralios
                 medienos charakteris dera su atsakingu meistrų darbu.
