@@ -5,30 +5,80 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Quote, ArrowUpRight } from "lucide-react";
 
+
 const testimonials = [
   {
-    id: "01",
     name: "Vadimas Pavlovskis",
-    company: "Malūniai",
-    title: "Jaukūs namai ir ilgalaikis pasitikėjimas",
-    text: "„Laukinio rąsto“ komanda mums pastatė jaukų ir kokybišką namą, o sėkmingas bendradarbiavimas tęsiasi jau ne vienerius metus. Vėliau patikėjome komandai ir naujo „Joga House“ objekto įgyvendinimą. Džiaugiamės rezultatais ir tikimės bendradarbiauti ateityje.",
+    affiliation: "Malūniai",
+    title: "Ilgalaikis bendradarbiavimas ir puikūs rezultatai",
+    quote:
+      "Nuoširdus ačiū UAB „ZASKOV-GRUP“ kolektyvui už naują objektą „Joga House“ Malūniuose. Puikiai bendradarbiaujame jau tris metus. Taip ir toliau vyrai!",
     image: "/images/testimonials/vadimas.jpg",
   },
   {
-    id: "02",
-    name: "Gediminas Petraitis",
-    company: "MB „Kauno rajono statybų projektai“",
-    title: "Profesionalumas, kokybė ir greitas įgyvendinimas",
-    text: "Dėkojame „Laukinio rąsto“ komandai už profesionaliai ir operatyviai įgyvendintą rąstinio namo projektą. Ypač vertiname kokybiškų medžiagų pasirinkimą ir atsakingą požiūrį į atliktus darbus.",
-    image: "/images/testimonials/gediminas.jpg",
+    name: "Vadimas Pavlovskis",
+    affiliation: "Privatus klientas",
+    title: "Jaukus ir kokybiškas rąstinis namas",
+    quote:
+      "Didelis ačiū UAB „ZASKOV-GRUP“ kolektyvui už jaukų ir kokybišką namą. Tikiuosi tolimesnio bendradarbiavimo ir ateityje.",
+    image: "/images/testimonials/vadimas.jpg",
   },
   {
-    id: "03",
-    name: "Deimantė ir Ernestas",
-    company: "2023 m.",
+    name: "Darius Jadzevičius",
+    affiliation: "Degučiai",
+    title: "Kruopštus darbas ir dėmesys kiekvienai detalei",
+    quote:
+      "„UAB „ZASKOV-GRUP“ kolektyvui dėkoju už išskirtinį rąstinį namą Degučiuose, kruopščiai ir atsakingai sumontuotus medinius langus ir duris, stogą bei jaukią aplinką dėka profesionaliai nušlifuoto ir nudažyto namo.Gerų darbų bei visokeriopos sėkmės ir ateityje!",
+    image: "/images/testimonials/darius.jpg",
+  },
+  {
+    name: "Eduard Gogolev",
+    affiliation: "Balninkai, Molėtų raj.",
+    title: "Visapusiški statybos darbai",
+    quote:
+      "Nuoširdus dėkui už pastatytą rąstinį namą, pamatų ir stogo montavimo bei žemės paruošimo darbus adresu: Molėtų raj. Balninkai, Vėrejimų g. 2F.",
+    image: "/images/testimonials/eduard.jpg",
+  },
+  {
+    name: "Rūta Sorakaitė",
+    affiliation: "2021 m.",
+    title: "Nuostabus namas, pranokęs lūkesčius",
+    quote:
+      "Ačiū Zaskov-Grup už 2021 metais pastatytą nuostabų namuką, kuris atrodo fantastiškai.",
+    image: "/images/testimonials/ruta.jpg",
+  },
+  {
+    name: "Ernestas ir Deimantė",
+    affiliation: "Rąstinis pirties namas",
     title: "Sudėtingas projektas – patikimose rankose",
-    text: "Mūsų nestandartinio rąstinio pirties namo projektas pareikalavo ypatingo dėmesio ir profesionalumo. Esame dėkingi komandai, ypač Karoliui Cieminiui, už nepriekaištingą darbą, vertingas konsultacijas ir pagalbą sprendžiant sudėtingus statybos klausimus.",
+    quote:
+      "Dėkojame UAB „Zaskov-Grup“ kolektyvui ir ypač Karoliui Cieminiui už nepriekaištingą požiūrį ir darbą pradedant mūsų sudėtingo ir nestandartinio rąstinio pirties namo projektavimu, ir baigiant statybos darbais bei priežiūra. Esame patenkinti ir dėkingi už įžvalgas statybų proceso metu, bendravimą išeiginių ir švenčių dienomis, konsultavimą ir mūsų interesų atstovavimą dėl nepriklausančių, bet susijusių darbų įsigilinant į sudėtingų darbų procesus, ir ilgas diskusijas su kitais specialistais.",
     image: "/images/testimonials/deimante-ernestas.jpg",
+  },
+ 
+  {
+    name: "Lilija ir Jan Janč",
+    affiliation: "Privatūs klientai",
+    title: "Kokybė, profesionalumas ir išskirtinis rūpestis",
+    quote:
+      "UAB „Zaskov-Grup“ – geriausia mūsų patirtis įgyvendinant svarbų mums projektą – nuosavo rąstinio namo statybą. Gavome ne vien aukštos kokybės namą, bet ir aukštos kultūros paslaugą nuo užsakymo pradžios iki namo pastatymo. Viskas buvo padaryta laiku ir profesionaliai. Nuoširdus ačiū Karoliui Cieminiui ir meistrams už rūpestį mūsų užsakymu kaip savu, už gerą jausmą, kai viskas vyksta kaip sutarta, laiku ir nuoširdžiai bendraujama kaip su ypatingais klientais.",
+    image: "/images/testimonials/lilija-jan.jpg",
+  },
+  {
+    name: "Marek Černevič",
+    affiliation: "Privatus klientas",
+    title: "Sklandus procesas ir profesionali komanda",
+    quote:
+      "Nuoširdžiai dėkoju visai Zaskov-Grup komandai už puikiai atliktą darbą. Nuo pat rąstinio namo projektavimo pradžios iki jo surinkimo, viskas vyko labai sklandžiai ir laikantis sutartų darbo atlikimo terminų. Visada laiku buvo atsakoma į bet kuriuos man kilusius klausimus. Ypač malonus bendravimas iš visų įmonės darbuotojų, kas gan retai pasitaiko statybos sektoriuje. Namo surinkimo metu jautėsi darbuotojų patirtis šioje srityje bei aukšta kompetencija. Dar kartą dėkoju Aleksejui, Konradui ir be abejo komandos vadovui – Karoliui.",
+    image: "/images/testimonials/marek.jpg",
+  },
+  {
+    name: "Mantas Notkus",
+    affiliation: "Kalveliai",
+    title: "Malonus bendradarbiavimas nuo pradžios iki pabaigos",
+    quote:
+      "Nuoširdžiai dėkoju UAB „ZASKOV-GRUP“ už puikiai surinktą rąstinį namą Kalveliuose, pagalbą išsirenkant projektą ir malonų bendradarbiavimą visose darbų fazėse.",
+    image: "/images/testimonials/mantas.jpg",
   },
 ];
 
@@ -103,7 +153,7 @@ export default function Testimonials() {
             className="max-w-2xl"
           >
             <span className="mb-5 inline-flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
-              <span className="h-px w-8 bg-[#B8875B]" />
+             
               KLIENTŲ ATSILIEPIMAI
             </span>
 
@@ -135,9 +185,9 @@ export default function Testimonials() {
           viewport={{ once: true, amount: 0.12 }}
           className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
         >
-          {testimonials.map((testimonial) => (
+          {testimonials.map((testimonial,i) => (
             <motion.article
-              key={testimonial.id}
+              key={i}
               variants={shouldReduceMotion ? undefined : cardVariants}
               className="group relative flex h-full flex-col overflow-hidden border border-[#E6E0D5] bg-white transition-all duration-500 hover:-translate-y-2 hover:border-[#B8875B]/50 hover:shadow-[0_20px_50px_rgba(38,38,38,0.08)]"
             >
@@ -145,7 +195,7 @@ export default function Testimonials() {
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <div className="mb-8 flex items-center justify-between">
                   <span className="text-xs font-semibold tracking-[0.18em] text-[#A0A096]">
-                    {testimonial.id} / ATSILIEPIMAS
+                    
                   </span>
 
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F0EDE4] transition-colors duration-300 group-hover:bg-[#2F4A3B]">
@@ -162,7 +212,7 @@ export default function Testimonials() {
                 </h4>
 
                 <p className="flex-1 text-[14px] text-justify leading-[1.9] text-[#6B6F76]">
-                  {testimonial.text}
+                  {testimonial.quote}
                 </p>
 
                 <div className="mt-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#788C6A] transition-colors duration-300 group-hover:text-[#B8875B]">
@@ -188,7 +238,7 @@ export default function Testimonials() {
                     {testimonial.name}
                   </h4>
                   <p className="mt-1 text-xs leading-relaxed text-[#8A8A80]">
-                    {testimonial.company}
+                    {testimonial.affiliation}
                   </p>
                 </div>
 
@@ -210,10 +260,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-12 flex flex-col items-center justify-center gap-3 text-center sm:mt-16"
         >
-          <div className="h-px w-12 bg-[#B8875B]" />
-          <p className="text-sm tracking-wide text-[#6B6F76]">
-            Kiekvienas projektas prasideda nuo pasitikėjimo.
-          </p>
+         
         </motion.div>
       </div>
     </section>

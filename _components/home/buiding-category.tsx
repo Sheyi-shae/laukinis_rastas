@@ -135,9 +135,8 @@ const imageReveal = {
           className="mx-auto mb-16 max-w-2xl text-center md:mb-24"
         >
           <span className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
-            <span className="h-px w-7 bg-[#B8875B]" />
+            
             Mūsų statiniai
-            <span className="h-px w-7 bg-[#B8875B]" />
           </span>
 
           <h2 className="font-heading text-3xl font-medium leading-[1.2] tracking-tight text-[#262626] sm:text-4xl md:text-5xl">

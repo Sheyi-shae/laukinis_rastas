@@ -115,11 +115,10 @@ export default function WhyChooseUs() {
           className="mx-auto mb-14 max-w-3xl text-center sm:mb-20"
         >
           <div className="mb-5 flex items-center justify-center gap-4">
-            <span className="h-px w-9 bg-[#B8875B]" />
+           
             <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
               KOKYBĖ IR MEISTRYSTĖ
             </span>
-            <span className="h-px w-9 bg-[#B8875B]" />
           </div>
 
           <h2 className="font-heading text-3xl font-medium leading-[1.15] tracking-tight text-[#262626] sm:text-4xl lg:text-5xl">

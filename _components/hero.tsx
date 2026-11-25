@@ -18,6 +18,7 @@ import {
   FolderKanban,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { SecondaryButton } from "./primary-button";
 
 const navigation = [
   { label: "Home", href: "/", active: true },
@@ -112,17 +113,18 @@ export default function Hero() {
             </p>
 
             <div className="hero-actions">
-              <Link href="/houses" className="primary-button">
+              <Link href="/houses" className="primary-button uppercase tracking-[0.19em] whitespace-nowrap">
                 Paskambinti
-                <PhoneCall size={19} />
+                <PhoneCall size={17} />
               </Link>
 
-              <Link href="/about" className="story-button ">
+              {/* <Link href="/about" className="story-button ">
                 <span className="play-icon">
                   <FolderKanban size={17} fill="currentColor" />
                 </span>
                 Mūsų projektai
-              </Link>
+              </Link> */}
+              <SecondaryButton name="Mūsų projektai"/>
             </div>
           </motion.div>
 

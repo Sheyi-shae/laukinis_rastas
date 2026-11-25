@@ -112,11 +112,10 @@ export default function HowItWorks() {
           className="mx-auto mb-16 max-w-3xl text-center sm:mb-20 lg:mb-24"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-8 bg-[#B8875B]" />
+           
             <span className="text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
               NUO IDĖJOS IKI NAMŲ
             </span>
-            <span className="h-px w-8 bg-[#B8875B]" />
           </div>
 
           <h2 className="font-heading text-3xl font-semibold leading-tight tracking-tight text-[#262626] sm:text-4xl lg:text-5xl">
