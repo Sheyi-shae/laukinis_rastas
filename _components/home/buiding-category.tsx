@@ -134,7 +134,7 @@ const imageReveal = {
           variants={textReveal}
           className="mx-auto mb-16 max-w-2xl text-center md:mb-24"
         >
-          <span className="mb-5 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
+          <span className="mb-4  inline-flex items-center gap-3 text-[11px] md:text-base font-bold uppercase tracking-[0.24em] text-[#788C6A]">
             
             Mūsų statiniai
           </span>

@@ -59,7 +59,7 @@ export default function CraftsmanshipExperience() {
           className="mb-12 max-w-3xl sm:mb-16"
         >
           <div className="mb-5 flex items-center gap-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
+            <span className="text-xs md:text-base font-bold uppercase tracking-[0.24em] text-[#788C6A]">
               Patirtis ir atsakomybė
             </span>
           </div>
@@ -100,9 +100,9 @@ export default function CraftsmanshipExperience() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17251D]/45 via-transparent to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8">
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                {/* <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
                   Kiekviena detalė svarbi
-                </span>
+                </span> */}
                 <p className="mt-2 max-w-md font-serif text-2xl leading-snug text-white sm:text-3xl">
                   Patirtis, kurią galima pamatyti kiekviename rąste.
                 </p>

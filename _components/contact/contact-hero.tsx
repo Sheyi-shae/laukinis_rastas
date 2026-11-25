@@ -51,9 +51,7 @@ export default function ContactHero() {
           className="mb-7 flex items-center gap-3"
         >
           
-          <span className="text-xs font-semibold tracking-[0.25em] text-[#E4D6C3]">
-            SUSISIEKIME
-          </span>
+          
         </motion.div>
 
         {/* Heading */}

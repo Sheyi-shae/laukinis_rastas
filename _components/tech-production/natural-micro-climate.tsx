@@ -81,7 +81,7 @@ export default function NaturalMicroclimate() {
           className="mb-12 max-w-3xl sm:mb-16 lg:mb-20"
         >
           <div className="mb-5 flex items-center gap-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#788C6A]">
+            <span className="text-xs md:text-base font-bold uppercase tracking-[0.24em] text-[#788C6A]">
               Natūralus komfortas
             </span>
           </div>
@@ -180,34 +180,61 @@ export default function NaturalMicroclimate() {
         </div>
 
         {/* Closing statement */}
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-          className="mt-16 border-t border-[#788C6A]/25 pt-8 sm:mt-20 sm:pt-10"
-        >
-          <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-            <span className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
-              Svarbu nepamiršti
-            </span>
+        
+<motion.div
+  initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="relative mt-20 overflow-hidden  bg-[#243A2F] px-6 py-16 text-center text-white sm:mt-24 sm:px-12 sm:py-20 lg:py-24"
+>
+  {/* Decorative background */}
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#788C6A]/20 blur-[100px]"
+  />
 
-            <p className="text-sm leading-7 text-[#6B6F76] sm:text-base sm:leading-8">
-              Natūrali mediena prisideda prie namų mikroklimato, tačiau
-              kokybiškam patalpų orui būtinas ir tinkamai suplanuotas
-              vėdinimas. Tik suderinus medžiagas, konstrukcijas ir
-              inžinerinius sprendimus sukuriama visavertė gyvenamoji aplinka.
-            </p>
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute -bottom-40 -left-32 h-96 w-96 rounded-full bg-[#B8875B]/15 blur-[100px]"
+  />
 
-            <a
-              href="#siluminis-komfortas"
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#2F4A3B] transition-colors hover:text-[#B8875B]"
-            >
-              Grįžti prie šiluminio komforto
-              <ArrowUpRight size={16} />
-            </a>
-          </div>
-        </motion.div>
+  {/* Decorative line */}
+  <div className="relative mx-auto mb-8 flex items-center justify-center gap-4">
+   
+    <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.3em] text-[#C5A17E] sm:text-xs">
+      Svarbu nepamiršti
+    </span>
+  </div>
+
+  <div className="relative mx-auto max-w-3xl">
+    <h3 className="font-serif text-3xl leading-[1.2] tracking-tight text-[#F7F5EE] sm:text-4xl lg:text-5xl">
+      Tik harmonija tarp gamtos ir technologijų sukuria tikrus namus.
+    </h3>
+
+    <p className="mx-auto mt-7 max-w-2xl text-sm leading-8 text-white/65 sm:text-base sm:leading-9">
+      Natūrali mediena prisideda prie namų mikroklimato, tačiau
+      kokybiškam patalpų orui būtinas ir tinkamai suplanuotas
+      vėdinimas. Tik suderinus medžiagas, konstrukcijas ir
+      inžinerinius sprendimus sukuriama visavertė gyvenamoji aplinka.
+    </p>
+
+    <a
+      href="#siluminis-komfortas"
+      className="group mt-10 inline-flex items-center gap-3 rounded-full border border-[#C5A17E]/50 bg-[#C5A17E]/10 px-7 py-4 text-sm font-semibold text-[#E8D2B9] transition-all duration-300 hover:border-[#C5A17E] hover:bg-[#C5A17E] hover:text-[#243A2F]"
+    >
+      Grįžti prie šiluminio komforto
+      <ArrowUpRight
+        size={17}
+        className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+      />
+    </a>
+  </div>
+
+  {/* Bottom decorative accent */}
+  <div className="pointer-events-none absolute bottom-0 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full bg-[#B8875B]/70" />
+</motion.div>
+
       </div>
     </section>
   );

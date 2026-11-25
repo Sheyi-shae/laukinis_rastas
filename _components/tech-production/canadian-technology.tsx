@@ -82,7 +82,7 @@ export default function CanadianTechnology() {
           <div className="mb-7 flex items-center justify-center gap-3">
             
 
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#D9C9B1] sm:text-xs">
+            <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.28em] text-[#D9C9B1] sm:text-xs">
               Tradicija ir meistrystė
             </span>
 
@@ -124,9 +124,7 @@ export default function CanadianTechnology() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17271F]/55 via-transparent to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#D9C9B1]">
-                  Individualus meistrų darbas
-                </span>
+               
 
                 <p className="mt-2 max-w-md font-serif text-2xl leading-snug text-white sm:text-3xl">
                   Natūrali rąsto forma tampa architektūros dalimi.
@@ -145,9 +143,9 @@ export default function CanadianTechnology() {
             viewport={{ once: true, amount: 0.25 }}
             variants={reveal}
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B8875B]">
+            {/* <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B8875B]">
               Kiekvienas rąstas – individualus
-            </span>
+            </span> */}
 
             <h3 className="mt-5 font-serif text-3xl leading-tight text-[#F7F5EE] sm:text-4xl">
               Ne standartizuota forma, o natūralus medžio charakteris.
@@ -178,7 +176,7 @@ export default function CanadianTechnology() {
               </p>
             </div>
 
-            <div className="mt-9 border-l-2 border-[#B8875B] pl-5">
+            <div className="mt-7 border-l-2 border-[#B8875B] pl-5">
               <p className="font-serif text-xl italic leading-relaxed text-[#D9C9B1]">
                 „Tikslumas slypi detalėse, o kiekvienas rąstas
                 reikalauja individualaus dėmesio.“
@@ -196,8 +194,8 @@ export default function CanadianTechnology() {
           className="mt-20 grid gap-8 border-y border-white/15 py-10 sm:mt-28 sm:grid-cols-[0.85fr_1.15fr] sm:items-center sm:gap-12 sm:py-14"
         >
           <div>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B8875B]">
-              Konstrukcijos detalės
+            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.25em] text-[#B8875B]">
+              Rankų darbo tikslumas
             </span>
 
             <h3 className="mt-4 font-serif text-3xl leading-tight text-[#F7F5EE] sm:text-4xl">
@@ -220,17 +218,12 @@ export default function CanadianTechnology() {
               className="object-cover"
             />
 
-            <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-[#243A2F]/85 px-4 py-3 backdrop-blur-sm">
-              <Ruler size={16} className="text-[#D9C9B1]" />
-              <span className="text-[10px] uppercase tracking-[0.18em] text-white">
-                Rankų darbo tikslumas
-              </span>
-            </div>
+          
           </div>
         </motion.div>
 
         {/* Technology advantages */}
-        <div className="mt-20 sm:mt-24 lg:mt-28">
+        <div className="mt-16">
           <motion.div
             initial={shouldReduceMotion ? false : "hidden"}
             whileInView="visible"
@@ -238,7 +231,7 @@ export default function CanadianTechnology() {
             variants={reveal}
             className="mb-10 max-w-2xl"
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#B8875B]">
+            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.25em] text-[#B8875B]">
               Technologijos privalumai
             </span>
 

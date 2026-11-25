@@ -20,15 +20,7 @@ import {
 import { motion } from "framer-motion";
 import { SecondaryButton } from "./primary-button";
 
-const navigation = [
-  { label: "Home", href: "/", active: true },
-  { label: "About Us", href: "/about" },
-  { label: "Our Houses", href: "/houses", dropdown: true },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
-];
+
 
 const features = [
 {
@@ -90,7 +82,7 @@ export default function Hero() {
        
 
         {/* HERO CONTENT */}
-        <div className="hero-content mt-8">
+        <div className="hero-content ">
 
           <motion.div
             className="hero-copy"
@@ -98,7 +90,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="hero-eyebrow">
+            <div className="hero-eyebrow mt-20">
               
               LAUKINIS RĄSTAS | NATŪRALŪS RĄSTINIAI NAMAI
             </div>
@@ -136,10 +128,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             {features.map((feature) => {
-              
+               const Icon = feature.icon;
               return (
                 <div className="hero-feature" key={feature.title}>
-                 
+                  <Icon size={27} strokeWidth={1.7} />
 
                   <div>
                     <strong>{feature.title}</strong>

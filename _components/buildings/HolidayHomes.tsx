@@ -86,7 +86,7 @@ export default function HolidayHomes() {
             className="mb-6 flex items-center justify-center gap-3"
           >
            
-            <span className="text-[10px] font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
+            <span className="text-[10px] md:text-base font-bold tracking-[0.25em] text-[#788C6A] uppercase">
               Poilsio namai ir sodybos
             </span>
            
@@ -141,18 +141,11 @@ export default function HolidayHomes() {
                 </h3>
               </div>
 
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm">
-                <ArrowUpRight size={21} strokeWidth={1.4} />
-              </div>
+              
             </div>
           </div>
 
-          {/* Small image label */}
-          <div className="absolute -bottom-4 right-5 hidden bg-[#F7F5EE] px-6 py-3 shadow-lg sm:block lg:right-10">
-            <span className="text-xs font-medium tracking-wide text-[#2F4A3B]">
-              Individualūs projektai · Natūrali architektūra
-            </span>
-          </div>
+         
         </motion.div>
 
         {/* Descriptive content */}
@@ -163,7 +156,7 @@ export default function HolidayHomes() {
             viewport={{ once: true, amount: 0.2 }}
             variants={reveal}
           >
-            <span className="mb-4 block text-[10px] font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
+            <span className="mb-4 block text-[10px] md:text-sm  font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
               Sukurta jūsų poilsiui
             </span>
 
@@ -217,7 +210,7 @@ export default function HolidayHomes() {
             className="mb-9 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"
           >
             <div>
-              <span className="mb-3 block text-[10px] font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
+              <span className="mb-3 block text-[10px] md:text-base font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
                 Galimybės ir sprendimai
               </span>
               <h3 className="font-serif text-3xl text-[#262626] sm:text-4xl">

@@ -61,8 +61,8 @@ export default function ContactDetails() {
       <div className="container relative">
         {/* Section heading */}
         <div className="mb-12 max-w-2xl lg:mb-16">
-          <span className="mb-5 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-[#788C6A]">
-            <span className="h-px w-8 bg-[#B8875B]" />
+          <span className="mb-5 inline-flex items-center gap-3 text-[10px] md:text-base font-bold uppercase tracking-[0.3em] text-[#788C6A]">
+            
             Susisiekime
           </span>
 

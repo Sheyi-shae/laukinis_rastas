@@ -30,7 +30,7 @@ const highlights = [
   },
   {
     icon: Trees,
-    title: "Natūrali mediena",
+    title: " Natūrali Karpatų mediena",
     description: "Masyvūs Karpatų eglės rąstai",
   },
   {
@@ -91,7 +91,7 @@ export default function ResidentialHomes() {
             </div>
 
             {/* Image caption */}
-            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between sm:bottom-7 sm:left-7 sm:right-7">
+            {/* <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between sm:bottom-7 sm:left-7 sm:right-7">
               <div className="max-w-xs text-white">
                 <span className="mb-2 block text-[10px] font-semibold tracking-[0.25em] text-white/75 uppercase">
                   Individuali statyba
@@ -104,17 +104,17 @@ export default function ResidentialHomes() {
               <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/50 bg-white/10 text-white backdrop-blur-sm sm:flex">
                 <ArrowUpRight size={20} strokeWidth={1.5} />
               </div>
-            </div>
+            </div> */}
 
             {/* Floating detail card */}
-            <div className="absolute -bottom-8 right-5 hidden w-52 border border-[#E4D9C8] bg-[#F7F5EE] p-5 shadow-xl sm:block lg:-right-8 lg:bottom-12">
+            {/* <div className="absolute -bottom-8 right-5 hidden w-52 border border-[#E4D9C8] bg-[#F7F5EE] p-5 shadow-xl sm:block lg:-right-8 lg:bottom-12">
               <span className="mb-3 block text-[10px] font-semibold tracking-[0.2em] text-[#788C6A] uppercase">
                 Mūsų principas
               </span>
               <p className="font-serif text-lg leading-snug text-[#262626]">
                 Kiekvienas namas turi savo charakterį.
               </p>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Content */}

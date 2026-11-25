@@ -96,7 +96,7 @@ export default function LogSaunas() {
             className="mb-6 flex items-center justify-center gap-3"
           >
             
-            <span className="text-[10px] font-semibold tracking-[0.28em] text-[#D9C9B1] uppercase">
+            <span className="text-[10px] md:text-base font-bold tracking-[0.28em] text-[#D9C9B1] uppercase">
               Rąstinės pirtys
             </span>
            
@@ -149,9 +149,9 @@ export default function LogSaunas() {
                 </h3>
               </div>
 
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
+              {/* <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
                 <ArrowUpRight size={21} strokeWidth={1.4} />
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>
@@ -167,7 +167,7 @@ export default function LogSaunas() {
           }}
           className="mx-auto mt-12 grid max-w-5xl gap-7 text-[15px] leading-[1.9] text-white/70 md:grid-cols-2 md:gap-12 lg:mt-14"
         >
-          <motion.p variants={reveal}>
+          {/* <motion.p variants={reveal}>
             Statome individualias rąstines pirtis iš Karpatų eglės, naudodami
             kanadietišką „laukinio rąsto“ technologiją. Natūralios medienos
             tekstūra, masyvios konstrukcijos ir išskirtinė architektūra suteikia
@@ -178,11 +178,11 @@ export default function LogSaunas() {
             Pagal jūsų poreikius galime projektuoti tiek nedideles tradicines
             pirtis, tiek erdvesnius pirties namus su poilsio kambariais,
             terasomis ir papildomomis gyvenamosiomis erdvėmis.
-          </motion.p>
+          </motion.p> */}
         </motion.div>
 
         {/* Features */}
-        <div className="mt-20 border-t border-white/15 pt-10 sm:mt-24 sm:pt-12">
+        <div className="mt-10  border-white/15  ">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -191,18 +191,19 @@ export default function LogSaunas() {
             className="mb-9 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
           >
             <div>
-              <span className="mb-3 block text-[10px] font-semibold tracking-[0.25em] text-[#B8875B] uppercase">
+              <span className="mb-3 block text-[10px] md:text-base font-bold tracking-[0.25em] text-[#B8875B] uppercase">
                 Mūsų požiūris
               </span>
-              <h3 className="font-serif text-3xl sm:text-4xl">
+              <h3 className="font-serif mb-3 text-3xl sm:text-4xl">
                 Kuo išsiskiria mūsų rąstinės pirtys?
               </h3>
-            </div>
-
-            <p className="max-w-sm text-sm leading-relaxed text-white/55">
+               <p className=" text-sm md:text-base leading-relaxed text-white/55">
               Kiekvienas projektas kuriamas individualiai, atsižvelgiant į
               jūsų poilsio viziją ir aplinką.
             </p>
+            </div>
+
+           
           </motion.div>
 
           <motion.div
@@ -254,7 +255,7 @@ export default function LogSaunas() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-white/15 pt-9 sm:flex-row sm:items-center lg:mt-16"
+          className="mt-14 flex flex-col items-start justify-between gap-6 border-t border-white/15 pt-12 sm:flex-row sm:items-center lg:mt-16"
         >
           <div>
             <p className="font-serif text-2xl text-white sm:text-3xl">

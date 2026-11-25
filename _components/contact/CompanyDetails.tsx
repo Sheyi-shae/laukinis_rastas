@@ -96,9 +96,9 @@ export default function CompanyDetails() {
                 </div>
 
                 <div>
-                  <span className="text-[10px] font-semibold tracking-[0.2em] text-[#788C6A]">
+                  {/* <span className="text-[10px] font-semibold tracking-[0.2em] text-[#788C6A]">
                     JURIDINIS ASMUO
-                  </span>
+                  </span> */}
 
                   <h3 className="mt-1 font-serif text-xl leading-snug text-[#262626] sm:text-2xl">
                     {company.name}

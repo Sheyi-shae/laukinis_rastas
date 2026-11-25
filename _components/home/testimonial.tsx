@@ -2,9 +2,19 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect,useState,useCallback,useRef } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { Quote, ArrowUpRight } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Quote,
+  Pause,
+  Play,
+} from "lucide-react";
+import Link from "next/link";
 
+const AUTO_SLIDE_INTERVAL = 5000;
 
 const testimonials = [
   {
@@ -108,6 +118,107 @@ const cardVariants = {
 
 export default function Testimonials() {
   const shouldReduceMotion = useReducedMotion();
+ const [visibleCount, setVisibleCount] = useState(3);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const touchStartX = useRef<number | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const total = testimonials.length;
+
+  // Responsive number of visible cards
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1);
+      } else if (window.innerWidth < 1280) {
+        setVisibleCount(2);
+      } else {
+        setVisibleCount(3);
+      }
+    };
+
+    updateVisibleCount();
+
+    window.addEventListener("resize", updateVisibleCount);
+
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
+
+  // Infinite carousel position
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((previous) => (previous + 1) % total);
+  }, [total]);
+
+  const previousSlide = useCallback(() => {
+    setCurrentIndex((previous) => (previous - 1 + total) % total);
+  }, [total]);
+
+  // Automatic sliding
+  useEffect(() => {
+    if (
+      shouldReduceMotion ||
+      isPaused ||
+      isHovered ||
+      total <= visibleCount
+    ) {
+      return;
+    }
+
+    intervalRef.current = setInterval(() => {
+      nextSlide();
+    }, AUTO_SLIDE_INTERVAL);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [
+    shouldReduceMotion,
+    isPaused,
+    isHovered,
+    visibleCount,
+    total,
+    nextSlide,
+  ]);
+
+  // Pause and reset timer when manually navigating
+  const handleNavigation = (direction: "next" | "previous") => {
+    setIsPaused(true);
+
+    if (direction === "next") {
+      nextSlide();
+    } else {
+      previousSlide();
+    }
+  };
+
+  // Touch gestures
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+
+    const difference =
+      touchStartX.current - event.changedTouches[0].clientX;
+
+    if (Math.abs(difference) > 50) {
+      handleNavigation(difference > 0 ? "next" : "previous");
+    }
+
+    touchStartX.current = null;
+  };
+
+  // Create enough slides for seamless wrapping
+  const visibleTestimonials = Array.from(
+    { length: Math.min(total, visibleCount + 1) },
+    (_, index) => testimonials[(currentIndex + index) % total]
+  );
 
   return (
     <section
@@ -152,7 +263,7 @@ export default function Testimonials() {
             transition={{ duration: 0.7 }}
             className="max-w-2xl"
           >
-            <span className="mb-5 inline-flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
+            <span className="mb-4 inline-flex items-center gap-3 text-xs md:text-base font-bold tracking-[0.22em] text-[#788C6A]">
              
               KLIENTŲ ATSILIEPIMAI
             </span>
@@ -172,96 +283,139 @@ export default function Testimonials() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="hidden md:block absolute right-10 max-w-md text-base top-36 leading-8 text-slate-700 lg:pb-1"
           >
-            O geriausias jų įvertinimas – klientų pasitikėjimas ir
-            rekomendacijos.
+            {/* O geriausias jų įvertinimas – klientų pasitikėjimas ir
+            rekomendacijos. */}
           </motion.p>
         </div>
 
-        {/* Testimonial cards */}
-        <motion.div
-          variants={shouldReduceMotion ? undefined : containerVariants}
-          initial={shouldReduceMotion ? false : "hidden"}
-          whileInView={shouldReduceMotion ? undefined : "visible"}
-          viewport={{ once: true, amount: 0.12 }}
-          className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3"
-        >
-          {testimonials.map((testimonial,i) => (
-            <motion.article
-              key={i}
-              variants={shouldReduceMotion ? undefined : cardVariants}
-              className="group relative flex h-full flex-col overflow-hidden border border-[#E6E0D5] bg-white transition-all duration-500 hover:-translate-y-2 hover:border-[#B8875B]/50 hover:shadow-[0_20px_50px_rgba(38,38,38,0.08)]"
-            >
-              {/* Card top */}
-              <div className="flex flex-1 flex-col p-6 sm:p-8">
-                <div className="mb-8 flex items-center justify-between">
-                  <span className="text-xs font-semibold tracking-[0.18em] text-[#A0A096]">
-                    
-                  </span>
-
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F0EDE4] transition-colors duration-300 group-hover:bg-[#2F4A3B]">
-                    <Quote
-                      size={20}
-                      strokeWidth={1.5}
-                      className="text-[#788C6A] transition-colors duration-300 group-hover:text-white"
-                    />
+         {/* Carousel heading and controls */}
+                <div className="mb-6 flex items-center justify-center">
+                  
+        
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsPaused((previous:any) => !previous)}
+                      aria-label={isPaused ? "Paleisti automatinį slinkimą" : "Sustabdyti automatinį slinkimą"}
+                      className="flex h-11 w-11 items-center justify-center border border-[#DCD5C9] bg-white text-[#2F4A3B] transition hover:bg-[#F0EDE4]"
+                    >
+                      {isPaused ? <Play size={17} /> : <Pause size={17} />}
+                    </button>
+        
+                    <button
+                      type="button"
+                      onClick={() => handleNavigation("previous")}
+                      aria-label="Ankstesnis atsiliepimas"
+                      className="flex h-11 w-11 items-center justify-center border border-[#DCD5C9] bg-white text-[#2F4A3B] transition hover:border-[#2F4A3B] hover:bg-[#2F4A3B] hover:text-white"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+        
+                    <button
+                      type="button"
+                      onClick={() => handleNavigation("next")}
+                      aria-label="Kitas atsiliepimas"
+                      className="flex h-11 w-11 items-center justify-center border border-[#DCD5C9] bg-white text-[#2F4A3B] transition hover:border-[#2F4A3B] hover:bg-[#2F4A3B] hover:text-white"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
                   </div>
                 </div>
-
-                <h4 className="mb-5 text-2xl font-semibold leading-snug tracking-tight text-[#262626]">
-                  {testimonial.title}
-                </h4>
-
-                <p className="flex-1 text-[14px] text-justify leading-[1.9] text-[#6B6F76]">
-                  {testimonial.quote}
-                </p>
-
-                <div className="mt-8 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#788C6A] transition-colors duration-300 group-hover:text-[#B8875B]">
-                  <span className="h-px w-6 bg-current transition-all duration-300 group-hover:w-10" />
-                  Kliento patirtis
+        
+                {/* Carousel viewport */}
+                <div
+                  className="overflow-hidden"
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  onFocusCapture={() => setIsPaused(true)}
+                  onTouchStart={handleTouchStart}
+                  onTouchEnd={handleTouchEnd}
+                  aria-label="Klientų atsiliepimai"
+                  aria-roledescription="karuselė"
+                >
+                  <div className="flex items-stretch gap-5">
+                    {visibleTestimonials.map((testimonial, index) => (
+                      <motion.article
+                        key={`${testimonial.name}-${currentIndex}-${index}`}
+                        initial={shouldReduceMotion ? false : { opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: shouldReduceMotion ? 0 : 0.45 }}
+                        className="flex min-h-[440px] w-full min-w-0 shrink-0 flex-col border border-[#E6E0D5] bg-white p-6 transition-all duration-500 hover:border-[#D9C9B1] hover:shadow-[0_20px_50px_rgba(38,38,38,0.07)] sm:w-[calc(50%-10px)] sm:p-7 xl:w-[calc(33.333%-14px)]"
+                      >
+                        {/* Quote icon */}
+                        <div className="flex items-center justify-between">
+                          <div className="flex h-11 w-11 items-center justify-center bg-[#F0EDE4] text-[#788C6A]">
+                            <Quote size={21} strokeWidth={1.5} />
+                          </div>
+        
+                          
+                        </div>
+        
+                        {/* Content */}
+                        <h4 className="mt-7 min-h-0 md:min-h-16 font-serif text-xl leading-snug text-[#262626]">
+                          {testimonial.title}
+                        </h4>
+        
+                        <p className="mt-5 flex-1 text-sm lg:text-base text-justify leading-7 text-[#555A54]">
+                          {testimonial.quote}
+                        </p>
+        
+                        {/* Client profile */}
+                        <div className="mt-8 flex items-center gap-4 border-t border-[#EAE5DC] pt-6">
+                          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E9E3D8]">
+                            <Image
+                              src={testimonial.image}
+                              alt={`Kliento ${testimonial.name} nuotrauka`}
+                              fill
+                              sizes="48px"
+                              className="object-cover"
+                            />
+                          </div>
+        
+                          <div className="min-w-0">
+                            <p className="text-sm font-semibold text-[#262626]">
+                              {testimonial.name}
+                            </p>
+        
+                            <p className="mt-1 text-xs leading-5 text-[#77766F]">
+                              {testimonial.affiliation}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.article>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
-              {/* Client profile */}
-              <div className="flex items-center gap-4 border-t border-[#EAE6DE] bg-[#FBFAF6] px-6 py-5 sm:px-8">
-                <div className="relative h-[58px] w-[58px] shrink-0 overflow-hidden rounded-full border-2 border-white bg-[#E8E3D8] shadow-sm">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    fill
-                    sizes="58px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+        
+                {/* Progress indicators */}
+                <div className="mt-8 flex items-center justify-between gap-5">
+                  <div className="flex flex-1 items-center gap-2">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        onClick={() => {
+                          setCurrentIndex(index);
+                          setIsPaused(true);
+                        }}
+                        aria-label={`Rodyti atsiliepimą ${index + 1}`}
+                        aria-current={currentIndex === index ? "true" : undefined}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          currentIndex === index
+                            ? "w-9 bg-[#2F4A3B]"
+                            : "w-3 bg-[#D9C9B1] hover:bg-[#788C6A]"
+                        }`}
+                      />
+                    ))}
+                  </div>
+        
+                  <span className="shrink-0 text-xs tabular-nums text-[#85847D]">
+                    {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                    {String(total).padStart(2, "0")}
+                  </span>
                 </div>
-
-                <div className="min-w-0 flex-1">
-                  <h4 className="truncate text-sm font-semibold text-[#262626]">
-                    {testimonial.name}
-                  </h4>
-                  <p className="mt-1 text-xs leading-relaxed text-[#8A8A80]">
-                    {testimonial.affiliation}
-                  </p>
-                </div>
-
-                <ArrowUpRight
-                  size={19}
-                  strokeWidth={1.5}
-                  className="shrink-0 text-[#B8875B] transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                />
-              </div>
-            </motion.article>
-          ))}
-        </motion.div>
-
-        {/* Bottom note */}
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-12 flex flex-col items-center justify-center gap-3 text-center sm:mt-16"
-        >
-         
-        </motion.div>
+        
+               
       </div>
     </section>
   );

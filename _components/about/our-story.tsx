@@ -53,7 +53,7 @@ export default function OurStory() {
   return (
     <section
       id="musu-istorija"
-      className="relative overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 "
     >
       {/* Decorative background rings */}
       <div
@@ -73,16 +73,7 @@ export default function OurStory() {
           }}
           className="mx-auto mb-16 max-w-3xl text-center lg:mb-20"
         >
-          <motion.div
-            variants={reveal}
-            className="mb-6 flex items-center justify-center gap-3"
-          >
           
-            <span className="text-[10px] font-semibold tracking-[0.25em] text-[#788C6A] uppercase">
-              Mūsų pradžia
-            </span>
-           
-          </motion.div>
 
           <motion.h2
             variants={reveal}
@@ -206,7 +197,7 @@ export default function OurStory() {
             className="pointer-events-none absolute -right-16 -top-32 h-72 w-72 rounded-full border border-white/[0.08]"
           />
 
-          <span className="relative mb-6 block text-[10px] font-semibold tracking-[0.28em] text-[#D9C9B1] uppercase">
+          <span className="relative mb-6 block text-[10px] md:text-sm font-bold tracking-[0.28em] text-[#D9C9B1] uppercase">
             Daugiau nei du dešimtmečiai meistrystės
           </span>
 

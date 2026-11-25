@@ -206,7 +206,7 @@ export default function AboutTestimonials() {
   );
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 ">
       {/* Decorative background */}
       <div
         aria-hidden="true"
@@ -237,23 +237,15 @@ export default function AboutTestimonials() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#555A54] sm:text-lg">
-            Per daugiau nei du dešimtmečius sukaupta patirtis leidžia mums
-            įgyvendinti tiek tradicinius, tiek nestandartinius rąstinės
-            architektūros projektus.
+            Per daugiau nei du dešimtmečius sukauptos patirties gavome daug klientų rekomendacijų, vertinančių mūsų profesionalų bendradarbiavimą, kokybiškas medžiagas bei gebėjimą spręsti sudėtingus statybos klausimus.
           </p>
 
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-[#77766F] sm:text-base">
-            Mūsų klientai vertina ne tik galutinį rezultatą, bet ir
-            profesionalų bendradarbiavimą, kokybiškas medžiagas bei gebėjimą
-            spręsti sudėtingus statybos klausimus.
-          </p>
+         
         </motion.div>
 
         {/* Carousel heading and controls */}
-        <div className="mb-6 flex items-center justify-between">
-          <p className="text-xs font-medium tracking-wide text-[#85847D]">
-            MŪSŲ KLIENTŲ ATSILIEPIMAI
-          </p>
+        <div className="mb-6 flex items-center justify-center">
+          
 
           <div className="flex items-center gap-2">
             <button

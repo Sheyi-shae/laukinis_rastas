@@ -135,7 +135,7 @@ export default function ProjectVisionCTA() {
           transition={{ duration: 0.8 }}
           className="mt-24 border-t border-[#CFC3B2] pt-12 text-center sm:mt-32 sm:pt-16"
         >
-          <span className="mb-6 block text-[10px] font-semibold tracking-[0.3em] text-[#788C6A] uppercase">
+          <span className="mb-6 block text-[10px] md:text-base font-bold tracking-[0.3em] text-[#788C6A] uppercase">
             Kiekvienas namas – vienintelis toks
           </span>
 

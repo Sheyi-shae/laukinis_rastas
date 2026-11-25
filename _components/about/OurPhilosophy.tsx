@@ -32,7 +32,7 @@ const principles = [
   },
   {
     number: "03",
-    title: "Individualumas",
+    title: " Projektų individualumas",
     description:
       "Net du pagal tą patį projektą pastatyti namai neatrodo vienodai. Natūralios medienos formos kiekvienam statiniui suteikia unikalų charakterį.",
     icon: Heart,
@@ -50,7 +50,7 @@ export default function OurPhilosophy() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#243A2F] py-20 text-white sm:py-24 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-[#243A2F] py-20 text-white sm:py-24 ">
       {/* Decorative background details */}
       <div
         aria-hidden="true"
@@ -71,9 +71,9 @@ export default function OurPhilosophy() {
           className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="text-xs font-semibold tracking-[0.22em] text-[#D9C9B1]">
+            {/* <span className="text-xs font-semibold tracking-[0.22em] text-[#D9C9B1]">
               KUO TIKIME
-            </span>
+            </span> */}
           </div>
 
           <h2 className="font-serif text-4xl leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
@@ -118,9 +118,9 @@ export default function OurPhilosophy() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17271F]/80 via-transparent to-transparent" />
 
               <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
-                <span className="text-xs font-semibold tracking-[0.2em] text-[#D9C9B1]">
+                {/* <span className="text-xs font-semibold tracking-[0.2em] text-[#D9C9B1]">
                   MŪSŲ POŽIŪRIS
-                </span>
+                </span> */}
 
                 <p className="mt-4 max-w-md font-serif text-3xl leading-tight text-white sm:text-4xl">
                   Ne tiesiog pastatyti namą. Sukurti tai, kas turi išliekamąją
@@ -156,7 +156,7 @@ export default function OurPhilosophy() {
                   }`}
                 >
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center border border-[#D9C9B1]/30 bg-white/[0.04] text-[#D9C9B1] transition-all duration-300 group-hover:border-[#D9C9B1] group-hover:bg-[#D9C9B1] group-hover:text-[#243A2F]">
+                    <div className="flex h-12 mb-3 w-12 items-center justify-center border border-[#D9C9B1]/30 bg-white/[0.04] text-[#D9C9B1] transition-all duration-300 group-hover:border-[#D9C9B1] group-hover:bg-[#D9C9B1] group-hover:text-[#243A2F]">
                       <Icon size={21} strokeWidth={1.5} />
                     </div>
 
@@ -165,7 +165,7 @@ export default function OurPhilosophy() {
                     </span>
                   </div>
 
-                  <h3 className="min-h-10 md:min-h-20 font-serif text-2xl leading-tight text-white sm:text-[26px]">
+                  <h3 className="min-h-10  font-serif text-2xl leading-tight text-white sm:text-[26px]">
                     {principle.title}
                   </h3>
 
@@ -191,7 +191,7 @@ export default function OurPhilosophy() {
           <div className="mx-auto flex max-w-3xl flex-col items-center">
            
 
-            <p className="mt-6 font-serif text-2xl leading-relaxed text-white sm:text-3xl">
+            <p className="mt-6 mb-8 font-serif text-2xl leading-relaxed text-white sm:text-3xl">
               Mums svarbiausia ne tik tai, kaip namas atrodo šiandien, bet ir
               kaip jis tarnaus po dešimties, penkiasdešimties ar dar daugiau
               metų.

@@ -63,7 +63,7 @@ const statistics = [
   {
     value: "1 200 m²",
     label: "Projektų mastas",
-    description: "Beveik tokio ploto buvo vienas didžiausių mūsų projektų Ukrainoje",
+    description: "Vienas didžiausių mūsų projektų Ukrainoje",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function OurJourney() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#F0EDE4] py-20 sm:py-24 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-[#F0EDE4] py-20 ">
       {/* Subtle decorative background */}
       <div
         aria-hidden="true"
@@ -91,13 +91,7 @@ export default function OurJourney() {
           transition={{ duration: 0.7 }}
           className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
         >
-          <div className="mb-5 flex items-center justify-center gap-3">
-            
-            <span className="text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
-              MŪSŲ KELIAS
-            </span>
-          
-          </div>
+         
 
           <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
             Nuo Karpatų kalnų
@@ -182,9 +176,7 @@ export default function OurJourney() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17271F]/85 via-[#17271F]/10 to-transparent" />
 
               <div className="absolute inset-x-0 bottom-0 p-7 text-white sm:p-10">
-                <span className="text-xs font-semibold tracking-[0.2em] text-[#D9C9B1]">
-                  MŪSŲ PATIRTIS
-                </span>
+                
 
                 <h3 className="mt-4 max-w-md font-serif text-3xl leading-tight sm:text-4xl">
                   Iš Karpatų atėjęs meistriškumas, kuriantis namus Europoje.
@@ -246,7 +238,7 @@ export default function OurJourney() {
           transition={{ duration: 0.7 }}
           className="mx-auto mt-14 flex max-w-3xl flex-col items-center text-center"
         >
-          <p className="font-serif text-2xl leading-relaxed text-[#2F4A3B] sm:text-3xl">
+          <p className="mb-7 font-serif text-2xl leading-relaxed text-[#2F4A3B] sm:text-3xl">
             „Laukinio rąsto“ istorija – tai kelias, kuriame kiekvienas projektas
             palieka savo pėdsaką.
           </p>

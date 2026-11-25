@@ -54,8 +54,8 @@
   );
   clip-path: polygon(
     0 0,
-    48% 0,
-    48% 100%,
+    50% 0,
+    50% 100%,
     0 100%
   );
 }
@@ -196,12 +196,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 7.8% 55px;
+  padding: 100px 5% 30px;
 }
 
 .hero-copy {
-  max-width: 550px;
-  margin-top: -20px;
+  width: 700px;
+  max-width: 800px;
+  margin-top: 30px;
 }
 
 .hero-eyebrow {
@@ -229,6 +230,7 @@
   font-size: clamp(54px, 5vw, 74px);
   line-height: 1.04;
   font-weight: 800;
+   max-width: 100%;
   letter-spacing: -3.8px;
   color: #19392e;
   margin: 0;
@@ -239,7 +241,7 @@
 }
 
 .hero-description {
-  max-width: 470px;
+  max-width: 80%;
   margin-top: 27px;
   color: #494949;
   font-size: 18px;
@@ -250,9 +252,11 @@
 /* HERO BUTTONS */
 
 .hero-actions {
+   max-width: 80%;
   display: flex;
+
   align-items: center;
-  gap: 53px;
+  gap: 100px;
   margin-top: 37px;
 }
 
@@ -299,7 +303,7 @@
 .hero-features {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 25px;
   width: fit-content;
   margin-top: 70px;
   padding-top: 27px;
@@ -309,8 +313,8 @@
 .hero-feature {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding-right: 24px;
+  gap: 12px;
+  padding-right: 8px;
   border-right: 1px solid rgba(47, 74, 59, 0.2);
   color: #8b7455;
 }
@@ -648,7 +652,7 @@
   }
 
   .hero-eyebrow {
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 1.5px;
     gap: 10px;
     margin-bottom: 20px;

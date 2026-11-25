@@ -20,7 +20,11 @@ type NavItem = {
 };
 
 const navigation: NavItem[] = [
-  { label: "Namai ir statiniai", href: "namai-ir-statiniai" },
+  {
+    label: "Namai ir statiniai", href: "namai-ir-statiniai", dropdown: true,
+    dropdownItem: [{ label: "Gyvenamieji rąstiniai namai", href: "/namai-ir-statiniai#gyvenamieji-namai" },
+      { label: "Rąstinės pirtys", href: "/namai-ir-statiniai#rastines-pirtys" },
+      {label:"Poilsio namai ir sodybos", href:"/namai-ir-statiniai#poilsio-namai"}] },
 
   { label: "Įgyvendinti projektai", href: "#" },
 
@@ -30,9 +34,9 @@ const navigation: NavItem[] = [
     dropdown: true,
     dropdownItem: [
       { label: "Medienos paruošimas", href: "/technologija-ir-gamyba#medienos-paruosimas" },
-      { label: "Kanadietiska technologija", href: "/technologija-ir-gamyba#kanadietiska-technologija" },
-      { label: "Siluminis komfortas", href: "/technologija-ir-gamyba#siluminis-komfortas" },
-      { label: "Natūralus mikroklimatas“ technologija", href: "/technologija-ir-gamyba#naturalus-mikroklimatas" },
+      { label: "Kanadietiška „laukinio rąsto“ technologija", href: "/technologija-ir-gamyba#kanadietiska-technologija" },
+      { label: "Ar rąstinis namas tikrai šiltas?", href: "/technologija-ir-gamyba#siluminis-komfortas" },
+      { label: "Natūralaus mikroklimato poveikis", href: "/technologija-ir-gamyba#naturalus-mikroklimatas" },
       { label: "Meistryste ir patirtis", href: "/technologija-ir-gamyba#meistryste-ir-patirtis" },
     ],
   },
@@ -48,8 +52,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const isHome = pathname === "/";
-
+ 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
@@ -73,15 +76,10 @@ export default function Navbar() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-  const showBackground = !isHome || scrolled || menuOpen;
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-[100] h-[76px] border-b transition-all duration-300 md:h-[96px] ${
-        showBackground
-          ? "border-[#2F4A3B]/10 bg-[#F7F5EE]/95 shadow-[0_2px_20px_rgba(0,0,0,0.045)] backdrop-blur-md"
-          : "border-transparent bg-transparent shadow-none"
-      }`}
+      className={`fixed inset-x-0 top-0 z-[100] h-[76px] border-b transition-all duration-300 md:h-[96px] border-[#2F4A3B]/10 bg-[#F7F5EE]/95 shadow-[0_2px_20px_rgba(0,0,0,0.045)] backdrop-blur-md`}
     >
       <div className="container relative flex h-full items-center justify-between">
         {/* LOGO - LEFT */}

@@ -80,7 +80,7 @@ export default function VisitWorkshop() {
             {/* Eyebrow */}
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-9 bg-[#B8875B]" />
-              <span className="text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
+              <span className="text-xs md:text-base font-bold tracking-[0.22em] text-[#788C6A]">
                 PAŽINKITE MŪSŲ MEISTRYSTĘ
               </span>
             </div>
@@ -98,7 +98,7 @@ export default function VisitWorkshop() {
             </p>
 
             {/* Description */}
-            <div className="mt-7 space-y-5 text-[15px] leading-[1.9] text-[#62665F]">
+            <div className="mt-7 space-y-5 text-justify text-[15px] leading-[1.9] text-[#62665F]">
               <p>
                 Kviečiame apsilankyti mūsų gamybos dirbtuvėse ir iš arti
                 susipažinti su kanadietiška „laukinio rąsto“ technologija.

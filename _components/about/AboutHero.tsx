@@ -2,25 +2,38 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion,Variant,Variants } from "framer-motion";
+import { motion, useReducedMotion, Variants } from "framer-motion";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 
 export default function AboutHero() {
   const shouldReduceMotion = useReducedMotion();
 
-  const fadeUp:Variants = {
-    hidden: { opacity: 0, y: 30 },
+  const container: Variants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.16, delayChildren: 0.2 },
+    },
+  };
+
+  const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 35 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.9, ease: "easeOut" },
     },
   };
 
   return (
-    <section className="relative isolate flex min-h-[720px] items-center overflow-hidden bg-[#243A2F] text-white sm:min-h-[780px] lg:min-h-[850px]">
+    <section className="relative isolate flex min-h-[760px] items-center overflow-hidden bg-[#243A2F] text-white sm:min-h-[820px] lg:min-h-[900px]">
 
       {/* Background image */}
-      <div className="absolute inset-0 -z-20">
+      <motion.div
+        initial={shouldReduceMotion ? false : { scale: 1.12 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-0 -z-20"
+      >
         <Image
           src="/images/about/about-us.JPG"
           alt="Rankomis statomas masyvių rąstų namas"
@@ -29,49 +42,34 @@ export default function AboutHero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-      </div>
+      </motion.div>
 
-      {/* Image overlays */}
-      <div className="absolute inset-0 -z-10 bg-[#17271E]/50" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#17271E]/55 via-[#17271E]/30 to-[#17271E]/75" />
+      {/* Overlays */}
+      <div className="absolute inset-0 -z-10 bg-[#17271E]/45" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#17271E]/50 via-[#17271E]/30 to-[#17271E]/90" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#17271E]/35 via-transparent to-[#17271E]/20" />
 
       {/* Decorative circles */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-[100px] top-1/2 -z-10 hidden h-[560px] w-[560px] -translate-y-1/2 rounded-full border border-white/[0.12] lg:block"
+        className="pointer-events-none absolute -right-[150px] top-1/2 -z-10 hidden h-[650px] w-[650px] -translate-y-1/2 rounded-full border border-white/[0.10] lg:block"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-[35px] top-1/2 -z-10 hidden h-[430px] w-[430px] -translate-y-1/2 rounded-full border border-white/[0.10] lg:block"
+        className="pointer-events-none absolute -right-[55px] top-1/2 -z-10 hidden h-[460px] w-[460px] -translate-y-1/2 rounded-full border border-white/[0.10] lg:block"
       />
 
-      <div className="container relative py-28 text-center sm:py-32 lg:py-36">
+      <div className="container relative py-32 text-center sm:py-36 lg:py-40">
 
         <motion.div
           initial={shouldReduceMotion ? false : "hidden"}
           animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: { staggerChildren: 0.15 },
-            },
-          }}
+          variants={container}
           className="mx-auto w-full max-w-5xl"
         >
+         
 
-          {/* Eyebrow */}
-          <motion.div
-            variants={fadeUp}
-            className="mb-8 flex items-center justify-center gap-3"
-          >
-            
-            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#D9C9B1] uppercase">
-              Apie „Laukinį rąstą“
-            </span>
-           
-          </motion.div>
-
-          {/* Main heading */}
+          {/* Heading */}
           <motion.h1
             variants={fadeUp}
             className="mx-auto max-w-5xl font-serif text-5xl leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.5rem]"
@@ -85,38 +83,68 @@ export default function AboutHero() {
           {/* Description */}
           <motion.p
             variants={fadeUp}
-            className="mx-auto mt-8 max-w-3xl text-base leading-[1.9] text-white/85 sm:text-lg"
+            className="mx-auto mt-8 max-w-3xl text-sm leading-8 text-white/80 sm:text-lg sm:leading-9"
           >
             Viskas prasidėjo nuo vieno namo 2003 metais. Šiandien mūsų patirtis,
             Karpatų mediena ir meistrų darbas padeda įgyvendinti individualius
             rąstinės architektūros projektus Lietuvoje ir Europoje.
           </motion.p>
 
+          {/* Experience panel */}
+          <motion.div
+            variants={fadeUp}
+            className="mx-auto mt-14 max-w-4xl border border-white/20 bg-[#17271E]/40 p-6 text-left shadow-2xl backdrop-blur-md sm:mt-20 sm:p-8 lg:p-10"
+          >
+            <div className="flex flex-col items-center gap-7 sm:flex-row sm:gap-10">
+
+              {/* Year */}
+              <div className="shrink-0 text-center sm:text-left">
+                <span className="block font-serif text-6xl leading-none tracking-tight text-[#D9C9B1] sm:text-7xl lg:text-8xl">
+                  2003
+                </span>
+                <span className="mt-3 block text-[9px] font-semibold uppercase tracking-[0.22em] text-white/55">
+                  Mūsų pradžia
+                </span>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden h-20 w-px bg-gradient-to-b from-transparent via-[#D9C9B1]/60 to-transparent sm:block" />
+
+              <div className="flex-1 text-center sm:text-left">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#D9C9B1]">
+                  Daugiau nei du dešimtmečiai
+                </span>
+
+                <p className="mt-3  text-sm leading-7 text-white/80 sm:text-base">
+                  Nuo pirmojo rąstinio namo iki išskirtinių individualių
+                  projektų Lietuvoje ir Europoje. Kiekvienas projektas –
+                  patirties, kruopštumo ir meistrystės rezultatas.
+                </p>
+              </div>
+
+             
+            </div>
+          </motion.div>
         </motion.div>
 
-        {/* Experience marker */}
-        <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
-          className="mx-auto mt-16 flex max-w-xl flex-col items-center justify-center gap-5 border-t border-white/20 pt-8 sm:mt-20 sm:flex-row sm:gap-8 lg:mt-24"
+        {/* Scroll indicator */}
+        <motion.a
+          href="#musu-istorija"
+          initial={shouldReduceMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.3, duration: 0.8 }}
+          className="mx-auto mt-12 flex w-fit flex-col items-center gap-3 text-white/55 transition-colors hover:text-[#D9C9B1]"
         >
-          <div className="text-center">
-            <span className="block font-serif text-4xl text-[#D9C9B1] sm:text-5xl">
-              2003
-            </span>
-            <span className="mt-2 block text-[10px] tracking-[0.2em] text-white/70 uppercase">
-              Mūsų istorijos pradžia
-            </span>
-          </div>
-
-          <span className="hidden h-12 w-px bg-white/25 sm:block" />
-
-          <p className="max-w-xs text-center text-xs leading-relaxed text-white/75 sm:text-left sm:text-sm">
-            Nuo pirmojo rąstinio namo iki individualių projektų Lietuvoje ir
-            Europoje.
-          </p>
-        </motion.div>
+          <span className="text-[9px] font-semibold uppercase tracking-[0.25em]">
+            Atraskite mūsų istoriją
+          </span>
+          <motion.span
+            animate={shouldReduceMotion ? undefined : { y: [0, 7, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ArrowDownRight size={19} />
+          </motion.span>
+        </motion.a>
 
       </div>
     </section>

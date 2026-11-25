@@ -83,7 +83,7 @@ export default function WoodPreparation() {
         >
           <div className="mb-6 flex items-center justify-center gap-3">
            
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
+            <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
               Gamybos procesas
             </span>
            
@@ -91,19 +91,17 @@ export default function WoodPreparation() {
 
           <h2 className="font-serif text-4xl leading-[1.15] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
             Medienos paruošimas –
+
             <span className="block italic text-[#788C6A]">
-              kokybė prasideda dar miške
+             kokybė prasideda dar miške
             </span>
           </h2>
 
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-8 text-[#555B55] sm:text-base sm:leading-9">
-            Tinkamas medienos paruošimas yra vienas svarbiausių
-            ilgaamžio rąstinio namo statybos etapų. Todėl mūsų
-            gamybos procesas prasideda gerokai anksčiau, nei
-            meistrai paima į rankas įrankius.
+            Tinkamas medienos paruošimas yra vienas svarbiausių ilgaamžio rąstinio namo statybos etapų. Medieną ruošiame šaltuoju metų laiku. Paprastai miško kirtimo darbai vyksta nuo rugsėjo pabaigos iki balandžio pabaigos, kai sumažėja medieną pažeidžiančių vabzdžių aktyvumas.
           </p>
 
-          <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#D9C9B1] bg-[#F7F5EE] px-5 py-3">
+          {/* <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#D9C9B1] bg-[#F7F5EE] px-5 py-3">
             <Trees size={17} className="text-[#788C6A]" />
             <span className="text-xs font-medium text-[#555B55]">
               Medieną ruošiame šaltuoju metų laiku
@@ -114,7 +112,7 @@ export default function WoodPreparation() {
             Paprastai miško kirtimo darbai vyksta nuo rugsėjo
             pabaigos iki balandžio pabaigos, kai sumažėja
             medieną pažeidžiančių vabzdžių aktyvumas.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Production timeline */}
@@ -221,14 +219,13 @@ export default function WoodPreparation() {
           </div>
 
           <p className="mt-6 font-serif text-2xl leading-relaxed text-[#2F4A3B] sm:text-3xl">
-            Tik tinkamai paruošta mediena gali tapti ilgaamžio
-            namo pagrindu.
+            Tik tinkamai paruošta mediena gali tapti ilgaamžio namo pagrindu - kiekvienas paruošimo etapas svarbus galutinei konstrukcijos kokybei ir medienos ilgaamžiškumui.
           </p>
 
-          <p className="mt-4 max-w-xl text-sm leading-7 text-[#6B6F76]">
+          {/* <p className="mt-4 max-w-xl text-sm leading-7 text-[#6B6F76]">
             Kiekvienas paruošimo etapas svarbus galutinei
             konstrukcijos kokybei ir medienos ilgaamžiškumui.
-          </p>
+          </p> */}
         </motion.div>
       </div>
     </section>

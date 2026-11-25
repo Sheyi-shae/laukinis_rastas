@@ -55,7 +55,7 @@ export default function WorkshopCTA() {
           >
             {/* Eyebrow */}
             <div className="mb-6 flex items-center gap-3">
-              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
                 Aplankykite mūsų dirbtuves
               </span>
             </div>
@@ -77,9 +77,9 @@ export default function WorkshopCTA() {
 
             {/* Contact information */}
             <div className="mt-10 border-t border-[#8B735B]/25 pt-8">
-              <h3 className="mb-6 font-serif text-xl text-[#262626]">
+              <h4 className="mb-6 font-serif text-xl md:text-2xl text-[#262626]">
                 Susisiekite dėl apsilankymo
-              </h3>
+              </h4>
 
               <div className="space-y-5">
                 {/* Phone */}

@@ -20,7 +20,7 @@ const advantages = [
   {
     number: "01",
     icon: Compass,
-    title: "Išsaugota natūrali rąstų forma",
+    title: "Natūrali rąstų forma",
     description:
       "Kiekvienas rąstas išlaiko savo natūralų charakterį, todėl namas įgauna išskirtinę išvaizdą ir individualumą.",
   },
@@ -110,7 +110,7 @@ export default function TechnologyAdvantages() {
           className="mx-auto mb-14 max-w-3xl text-center sm:mb-16 lg:mb-20"
         >
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B59F]">
+            <span className="text-xs md:text-base font-bold uppercase tracking-[0.24em] text-[#C4B59F]">
               Kodėl ši technologija?
             </span>
           </div>
@@ -147,7 +147,7 @@ export default function TechnologyAdvantages() {
                 className="group border-t border-white/15 pt-6 transition-colors duration-300 hover:border-[#B8875B]"
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-[#C4B59F] transition-all duration-300 group-hover:border-[#B8875B] group-hover:bg-[#B8875B] group-hover:text-[#243A2F]">
+                  <div className="flex mb-2 h-11 w-11 items-center justify-center rounded-full border border-white/20 text-[#C4B59F] transition-all duration-300 group-hover:border-[#B8875B] group-hover:bg-[#B8875B] group-hover:text-[#243A2F]">
                     <Icon size={20} strokeWidth={1.5} />
                   </div>
 
@@ -156,9 +156,9 @@ export default function TechnologyAdvantages() {
                   </span>
                 </div>
 
-                <h3 className="min-h-4 md:min-h-20 font-serif text-lg leading-snug text-white sm:text-xl">
+                <h4 className="min-h-4 md:min-h-7 font-serif text-lg md:text-2xl leading-snug text-white sm:text-xl">
                   {advantage.title}
-                </h3>
+                </h4>
 
                 <p className="mt-3 text-sm text-justify leading-7 text-white/60">
                   {advantage.description}

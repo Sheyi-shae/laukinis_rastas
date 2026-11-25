@@ -62,7 +62,7 @@ export default function CompletedProjects() {
         >
           <div className="mb-5 flex items-center justify-center gap-3">
             
-            <span className="text-xs font-semibold tracking-[0.22em] text-[#788C6A]">
+            <span className="text-xs md:text-base font-bold tracking-[0.22em] text-[#788C6A]">
                MŪSŲ DARBAI
             </span>
             

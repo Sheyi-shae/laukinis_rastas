@@ -53,7 +53,7 @@ export default function TimberOrigin() {
             <div className="mb-6 flex items-center gap-3">
               <Trees size={17} className="text-[#788C6A]" />
 
-              <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
+              <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
                 Natūrali mediena
               </span>
             </div>
@@ -88,16 +88,7 @@ export default function TimberOrigin() {
               </p>
             </div>
 
-            <div className="mt-9 flex items-center gap-4 border-t border-[#D9C9B1] pt-6">
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#E8E4D9] text-[#2F4A3B]">
-                <Trees size={20} />
-              </div>
-
-              <p className="max-w-sm text-xs leading-6 text-[#6B6F76]">
-                Kiekvienam namui mediena atrenkama individualiai,
-                atsižvelgiant į būsimos konstrukcijos poreikius.
-              </p>
-            </div>
+          
           </motion.div>
 
           {/* Image */}

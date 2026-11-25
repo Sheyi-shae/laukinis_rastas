@@ -114,9 +114,9 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto mb-14 max-w-3xl text-center sm:mb-20"
         >
-          <div className="mb-5 flex items-center justify-center gap-4">
+          <div className="mb-4 flex items-center justify-center gap-4">
            
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
+            <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.28em] text-[#788C6A] sm:text-xs">
               KOKYBĖ IR MEISTRYSTĖ
             </span>
           </div>
@@ -191,11 +191,7 @@ export default function WhyChooseUs() {
                   </div>
                 )}
 
-                {/* Bottom hover detail */}
-                <span className="mt-7 flex items-center gap-2 text-xs  font-bold uppercase tracking-[0.16em] text-[#788C6A]   transition-all duration-300 group-hover:gap-3 group-hover:opacity-100">
-                  Mūsų įsipareigojimas
-                  <ArrowUpRight size={14} strokeWidth={1} />
-                </span>
+               
               </motion.article>
             );
           })}

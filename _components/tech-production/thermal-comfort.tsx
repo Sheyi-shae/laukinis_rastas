@@ -119,12 +119,12 @@ export default function ThermalComfort() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17271F]/65 via-transparent to-transparent" />
 
               <div className="absolute bottom-7 left-7 right-7 sm:bottom-9 sm:left-9">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#D9C9B1]">
+                {/* <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#D9C9B1]">
                   Komfortas visais metų laikais
-                </span>
+                </span> */}
 
                 <p className="mt-3 max-w-md font-serif text-2xl leading-snug text-white sm:text-3xl">
-                  Šiluma prasideda nuo tinkamai suprojektuoto namo.
+                 Komfortas visais metų laikais
                 </p>
               </div>
             </div>
@@ -195,18 +195,16 @@ export default function ThermalComfort() {
             variants={reveal}
             className="mx-auto mb-10 max-w-2xl text-center"
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#788C6A]">
+            {/* <span className="text-[10px] md:text-base font-bold uppercase tracking-[0.25em] text-[#788C6A]">
               Dvi skirtingos savybės
-            </span>
+            </span> */}
 
             <h3 className="mt-4 font-serif text-3xl leading-tight text-[#262626] sm:text-4xl">
               Šiluminė varža ir šiluminė talpa
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-[#6B6F76]">
-              Šios sąvokos dažnai painiojamos, tačiau jos
-              nusako skirtingus medžiagos ir konstrukcijos
-              veikimo principus.
+              Dvi skirtingos savybės Šiluminė varža ir šiluminė talpa yra  dažnai painiojamos, tačiau jos nusako skirtingus medžiagos ir konstrukcijos veikimo principus.
             </p>
           </motion.div>
 
@@ -227,7 +225,7 @@ export default function ThermalComfort() {
                 </div>
 
                 <span className="mt-8 block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#D9C9B1]">
-                  Šilumos išsaugojimas
+                  {/* Šilumos išsaugojimas */}
                 </span>
 
                 <h4 className="mt-3 font-serif text-3xl sm:text-4xl">
@@ -266,7 +264,7 @@ export default function ThermalComfort() {
                 </div>
 
                 <span className="mt-8 block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
-                  Šilumos kaupimas
+                  {/* Šilumos kaupimas */}
                 </span>
 
                 <h4 className="mt-3 font-serif text-3xl text-[#262626] sm:text-4xl">
@@ -362,7 +360,7 @@ export default function ThermalComfort() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={reveal}
-          className="mt-16 border-t border-[#D9C9B1] pt-8 sm:mt-20 sm:pt-10"
+          className="mt-16  border-t border-[#D9C9B1] pt-8 sm:mt-20 sm:pt-13"
         >
           <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#EAE5D9] text-[#2F4A3B]">
