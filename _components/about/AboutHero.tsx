@@ -25,7 +25,7 @@ export default function AboutHero() {
   };
 
   return (
-    <section className="relative isolate flex min-h-[760px] items-center overflow-hidden bg-[#243A2F] text-white sm:min-h-[820px] lg:min-h-[900px]">
+    <section className="relative isolate flex  items-center overflow-hidden bg-[#243A2F] text-white ">
 
       {/* Background image */}
       <motion.div
@@ -91,24 +91,24 @@ export default function AboutHero() {
           </motion.p>
 
           {/* Experience panel */}
-          <motion.div
+          {/* <motion.div
             variants={fadeUp}
             className="mx-auto mt-14 max-w-4xl border border-white/20 bg-[#17271E]/40 p-6 text-left shadow-2xl backdrop-blur-md sm:mt-20 sm:p-8 lg:p-10"
           >
-            <div className="flex flex-col items-center gap-7 sm:flex-row sm:gap-10">
+            <div className="flex flex-col items-center gap-7 sm:flex-row sm:gap-10"> */}
 
               {/* Year */}
-              <div className="shrink-0 text-center sm:text-left">
+              {/* <div className="shrink-0 text-center sm:text-left">
                 <span className="block font-serif text-6xl leading-none tracking-tight text-[#D9C9B1] sm:text-7xl lg:text-8xl">
                   2003
                 </span>
                 <span className="mt-3 block text-[9px] font-semibold uppercase tracking-[0.22em] text-white/55">
                   Mūsų pradžia
                 </span>
-              </div>
+              </div> */}
 
               {/* Divider */}
-              <div className="hidden h-20 w-px bg-gradient-to-b from-transparent via-[#D9C9B1]/60 to-transparent sm:block" />
+              {/* <div className="hidden h-20 w-px bg-gradient-to-b from-transparent via-[#D9C9B1]/60 to-transparent sm:block" />
 
               <div className="flex-1 text-center sm:text-left">
                 <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#D9C9B1]">
@@ -120,11 +120,11 @@ export default function AboutHero() {
                   projektų Lietuvoje ir Europoje. Kiekvienas projektas –
                   patirties, kruopštumo ir meistrystės rezultatas.
                 </p>
-              </div>
+              </div> */}
 
              
-            </div>
-          </motion.div>
+            {/* </div>
+          </motion.div> */}
         </motion.div>
 
         {/* Scroll indicator */}
