@@ -14,7 +14,7 @@ const projects = [
     subtitle: "Tradicinė meistrystė ir įspūdinga rąstų konstrukcija",
     description:
       "Šiame projekte atsiskleidžia tikroji „laukinio rąsto“ technologijos vertė – masyvūs natūralūs rąstai, kruopščiai formuojamos jungtys ir išraiškinga pastato konstrukcija. Kiekvienas elementas individualiai pritaikomas, siekiant sukurti tvirtą, ilgaamžį ir savito charakterio namą.",
-    image: "/images/bc1.jpg",
+    image: "/images/home1.jpg",
     imageAlt: "Individualus rąstinis namas Kaspėdai",
     href: "/projektai/kaspedai",
   },
@@ -25,7 +25,7 @@ const projects = [
     subtitle: "Natūralios medienos grožis ir šiuolaikinis komfortas",
     description:
       "Individualios architektūros rąstinis namas, kuriame masyvios medienos konstrukcijos dera su dideliais langais, erdviu išplanavimu ir natūralia aplinka. Projektas atskleidžia, kaip tradicinė rąstinių namų statyba gali būti pritaikyta šiuolaikiniam gyvenimo būdui.",
-    image: "/images/bc2.jpg",
+    image: "/images/project2.png",
     imageAlt: "Individualus rąstinis namas Šilagėlė",
     href: "/projektai/silagele",
   },
@@ -36,7 +36,7 @@ const projects = [
     subtitle: "Naujas gyvenimas senai medinei architektūrai",
     description:
       "Rąstinio pastato atnaujinimo darbai, kuriuose ypatingas dėmesys skiriamas medinių konstrukcijų būklei ir jų išsaugojimui. Projektas demonstruoja medienos apdirbimo patirtį bei gebėjimą dirbti ne tik su naujais, bet ir su esamais rąstiniais statiniais.",
-    image: "/images/bc3.jpg",
+    image: "/images/project3.png",
     imageAlt: "Restauruojamas istorinis rąstinis pastatas",
     href: "/projektai/restauravimas",
   },
@@ -107,17 +107,19 @@ export default function CompletedProjects() {
               }}
               className="group relative isolate min-h-[470px] overflow-hidden rounded-sm bg-[#D9C9B1] sm:min-h-[520px]"
             >
-              {/* Background image */}
-              <Image
-                src={project.image}
-                alt={project.imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
-              />
+           
+             {/* Background image */}
+<Image
+  src={project.image}
+  alt={project.imageAlt}
+  fill
+  quality={95}
+  className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110 object-center"
+/>
+
 
               {/* Image overlay */}
-             <div className="absolute inset-0 bg-gradient-to-t from-[#14231B]/95 via-transparent to-[#14231B]/95 " />
+             <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#14231B]/95 " />
               {/* Top project number */}
               <div className="absolute left-6 top-6 z-10 flex items-center gap-3">
                 <span className="font-serif text-3xl text-white">
@@ -133,7 +135,7 @@ export default function CompletedProjects() {
               <div className="absolute inset-x-4 bottom-4 z-10 sm:inset-x-5 sm:bottom-5">
 
   {/* Information panel */}
-  <div className="translate-y-0 border border-white/30 bg-[#F7F5EE]/85 p-5 opacity-100 shadow-2xl backdrop-blur-xl transition-all duration-500 ease-out group-hover:translate-y-4 group-hover:opacity-0 group-hover:backdrop-blur-none sm:p-6">
+  {/* <div className="translate-y-0 border border-white/30 bg-[#F7F5EE]/85 p-5 opacity-100 shadow-2xl backdrop-blur-xl transition-all duration-500 ease-out group-hover:translate-y-4 group-hover:opacity-0 group-hover:backdrop-blur-none sm:p-6">
 
     <h3 className="font-heading text-lg font-semibold leading-snug text-[#262626] sm:text-xl">
       {project.title}
@@ -147,7 +149,7 @@ export default function CompletedProjects() {
       {project.description}
     </p>
 
-    {/* Link remains visible separately */}
+    
     <div className="mt-5 border-t border-[#D9C9B1] pt-4">
       <Link
         href={project.href}
@@ -162,10 +164,10 @@ export default function CompletedProjects() {
         </span>
       </Link>
     </div>
-  </div>
+  </div> */}
 
-  {/* Persistent link revealed on hover */}
-  <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 opacity-0 transition-all duration-500 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+  
+  {/* <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 opacity-0 transition-all duration-500 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
     <Link
       href={project.href}
       className="group/link flex items-center justify-between border border-white/40 bg-[#F7F5EE]/90 px-5 py-4 text-sm font-semibold text-[#2F4A3B] shadow-xl backdrop-blur-md transition-colors hover:bg-white"
@@ -175,7 +177,7 @@ export default function CompletedProjects() {
         <ArrowUpRight size={18} />
       </span>
     </Link>
-  </div>
+  </div> */}
 </div>
             </motion.article>
           ))}

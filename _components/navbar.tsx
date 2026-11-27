@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type NavItem = {
   label: string;
@@ -26,7 +27,7 @@ const navigation: NavItem[] = [
       { label: "Rąstinės pirtys", href: "/namai-ir-statiniai#rastines-pirtys" },
       {label:"Poilsio namai ir sodybos", href:"/namai-ir-statiniai#poilsio-namai"}] },
 
-  { label: "Įgyvendinti projektai", href: "#" },
+  { label: "Įgyvendinti projektai", href: "/projektai" },
 
   {
     label: "Technologijos ir gamyba",
@@ -79,49 +80,37 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-[100] h-[76px] border-b transition-all duration-300 md:h-[96px] border-[#2F4A3B]/10 bg-[#F7F5EE]/95 shadow-[0_2px_20px_rgba(0,0,0,0.045)] backdrop-blur-md`}
+      className={`fixed inset-x-0 top-0 z-[100] h-[76px] border-b transition-all duration-300 md:h-[96px] border-[#2F4A3B]/10 bg-[#F7F5EE] shadow-[0_2px_20px_rgba(0,0,0,0.045)] backdrop-blur-md`}
     >
       <div className="container relative flex h-full items-center justify-between">
         {/* LOGO - LEFT */}
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
-          className="relative z-10 flex shrink-0 items-center gap-2.5 text-[#2F4A3B] md:gap-3.5"
+          className="relative block w-[34%] sm:w-[30%] md:w-[25%] lg:w-[15%] bg-white"
         >
-          <svg
-            width="43"
-            height="43"
-            viewBox="0 0 43 43"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-[34px] w-[34px] md:h-[43px] md:w-[43px]"
-          >
-            <path
-              d="M21.5 3L39 16V40H26V23H17V40H4V16L21.5 3Z"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M12 40V20L21.5 13L31 20V40"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinejoin="round"
-            />
-          </svg>
+          <Image
+            width="200"
+            height="100"
+            alt="logo"
+            src={"/images/header-logo.png"}
+          
+            className=" w-full"
+          />
+           
         </Link>
 
         {/* DESKTOP NAVIGATION - CENTER */}
         <nav
           aria-label="Main navigation"
-          className="absolute left-[45%] hidden -translate-x-1/2 items-center gap-5 lg:flex xl:gap-7"
+          className="absolute left-[47%] hidden -translate-x-1/2 items-center gap-5 lg:flex xl:gap-7"
         >
           {navigation.map((item) => (
          
             <span key={item.label} className="group/item relative">
               <Link
                 href={item.href}
-                className={`relative flex items-center tracking-wide font-medium gap-1 whitespace-nowrap py-3 text-[12px] transition-colors duration-300 xl:text-[16px] ${
+                className={`relative flex items-center tracking-wide font-medium gap-1 whitespace-nowrap py-3 text-[12px] transition-colors duration-300 xl:text-[14px] ${
                   isActive(item.href)
                     ? "text-[#2F4A3B]"
                     : "text-[#454B46] group-hover/item:text-[#2F4A3B]"
@@ -187,7 +176,7 @@ export default function Navbar() {
         {/* DESKTOP CTA - RIGHT */}
         <div className="ml-auto hidden lg:block">
           <motion.a
-            href="#contact"
+            href="/kontaktai"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

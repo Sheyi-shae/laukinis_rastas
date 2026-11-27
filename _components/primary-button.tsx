@@ -3,20 +3,21 @@ import {motion} from "framer-motion"
 import { ArrowUpRight } from 'lucide-react'
 
 interface button{
-    name:string
+  name: string
+  link:string
 }
-export default function PrimaryButton({ name }:button) {
+export default function PrimaryButton({ name,link}:button) {
   return (
       <div>
-           <div className="ml-auto hidden lg:block">
+           <div className="ml-auto block">
           <motion.a
-            href="#contact"
+            href={link}
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="group relative hidden items-center gap-4 overflow-hidden  border border-[#D9C9B1]/35 bg-[#2F4A3B] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.19em] text-[#F5F0E7] shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:border-[#D9C9B1]/70 hover:bg-[#2F4A3B]/75 md:flex"
+            className="group relative items-center gap-4 overflow-hidden  border border-[#D9C9B1]/35 bg-[#2F4A3B] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.19em] text-[#F5F0E7] shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:border-[#D9C9B1]/70 hover:bg-[#2F4A3B]/75 justify-center flex"
           >
             {/* Focused glass spotlight */}
             <span className="pointer-events-none absolute -inset-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,201,177,0.28),transparent_65%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
@@ -53,18 +54,18 @@ export default function PrimaryButton({ name }:button) {
   )
 }
 
-export  function SecondaryButton({ name }:button) {
+export  function SecondaryButton({ name,link }:button) {
   return (
       <div>
-           <div className="ml-auto hidden lg:block">
+           <div className="ml-auto  lg:block">
           <motion.a
-            href="#contact"
+            href={link}
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="group relative hidden items-center gap-4 overflow-hidden  border border-[#B8875B]/35 bg-[#B8875B] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.19em] text-[#F5F0E7] shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:border-[#B8875B]/70 hover:bg-[#B8875B]/75 md:flex"
+            className="group relative justify-center gap-4 overflow-hidden  border border-[#B8875B]/35 bg-[#B8875B] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.19em] text-[#F5F0E7] text-center items-center shadow-[0_8px_30px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:border-[#B8875B]/70 hover:bg-[#B8875B]/75 flex"
           >
             {/* Focused glass spotlight */}
             <span className="pointer-events-none absolute -inset-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(217,201,177,0.28),transparent_65%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />

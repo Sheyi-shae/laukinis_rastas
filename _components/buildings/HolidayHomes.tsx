@@ -121,7 +121,7 @@ export default function HolidayHomes() {
         >
           <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[16/8] lg:aspect-[16/7]">
             <Image
-              src="/images/homes/holiday-homes.jpg"
+              src="/images/homes/namai3.png"
               alt="Rąstinis poilsio namas gamtos apsuptyje su erdvia terasa"
               fill
               sizes="100vw"

@@ -32,10 +32,10 @@ export default function VisitWorkshop() {
           >
             <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="/images/workshop-visit.jpg"
+                src="/images/home-cta.jpg"
                 alt="Rąstinių namų gamybos dirbtuvės ir rankomis apdirbami mediniai rąstai"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                //sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 hover:scale-[1.03]"
               />
 
@@ -87,30 +87,29 @@ export default function VisitWorkshop() {
 
             {/* Heading */}
             <h2 className="max-w-xl text-4xl font-semibold leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-[3.5rem]">
-              Aplankykite mūsų{" "}
+             Aplankykite mūsų {" "}
               <span className="font-serif font-normal italic text-[#788C6A]">
                 dirbtuves.
               </span>
             </h2>
 
             <p className="mt-6 text-xl font-medium leading-relaxed text-[#2F4A3B] sm:text-2xl">
-              Pamatykite, kaip gimsta jūsų būsimi namai.
+              
+Pamatykite, kaip gimsta jūsų būsimi namai.
             </p>
 
             {/* Description */}
             <div className="mt-7 space-y-5 text-justify text-[15px] leading-[1.9] text-[#62665F]">
               <p>
-                Kviečiame apsilankyti mūsų gamybos dirbtuvėse ir iš arti
-                susipažinti su kanadietiška „laukinio rąsto“ technologija.
-                Pamatykite, kaip atrenkami ir ruošiami Karpatų eglės rąstai,
-                kaip mūsų meistrai rankomis formuoja jų jungtis ir kaip iš
-                atskirų rąstų gimsta unikalus namas.
+                Kviečiame apsilankyti mūsų gamybos dirbtuvėse ir iš arti susipažinti su kanadietiška „laukinio
+rąsto“ technologija. Pamatykite, kaip atrenkami ir ruošiami Karpatų eglės rąstai, kaip mūsų
+meistrai rankomis formuoja jų jungtis ir kaip iš atskirų rąstų gimsta unikalus namas.
               </p>
 
               <p>
-                Apsilankymo metu galėsite įvertinti medienos kokybę,
-                pamatyti vykdomus projektus, susipažinti su gamybos procesu
-                ir tiesiogiai su meistrais aptarti savo būsimo namo viziją.
+                
+                Apsilankymo metu galėsite įvertinti medienos kokybę, pamatyti vykdomus projektus, susipažinti su gamybos procesu ir tiesiogiai su meistrais aptarti savo būsimo namo viziją.
+
               </p>
             </div>
 

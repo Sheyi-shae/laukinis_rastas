@@ -1,23 +1,15 @@
 
 "use client";
 
+import { motion } from "framer-motion";
+import {
+  House,
+  Leaf,
+  PhoneCall,
+  ShieldCheck
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import {
-  ArrowRight,
-  ChevronDown,
-  Play,
-  Leaf,
-  ShieldCheck,
-  House,
-  Menu,
-  X,
-  Trees,
-  PhoneCall,
-  FolderKanban,
-} from "lucide-react";
-import { motion } from "framer-motion";
 import { SecondaryButton } from "./primary-button";
 
 
@@ -25,18 +17,18 @@ import { SecondaryButton } from "./primary-button";
 const features = [
 {
 icon: Leaf,
-title: "Ekologiškas",
+title: "Autentiškas rąstinių namų grožis",
 subtitle: "ir tvarus",
 },
 {
 icon: ShieldCheck,
-title: "Patvari",
+title: "Ilgaamžiai namai gyvenimui ir poilsiui",
 subtitle: "konstrukcija",
 },
 {
 icon: House,
-title: "Individualūs projektai",
-subtitle: "jūsų gyvenimo būdui",
+title: "Individualūs meistrų šedevrai ",
+subtitle: "jūsų gerovei",
 },
 ];
 
@@ -48,33 +40,33 @@ export default function Hero() {
       <section className="wooden-hero ">
 
         {/* Background image */}
-        <div className="hero-image">
-   
-<motion.div
-  initial={{ scale: 1.15, opacity: 0.3 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{
-    scale: {
-      duration: 3,
-      ease: [0.22, 1, 0.36, 1],
-    },
-    opacity: {
-      duration: 1.4,
-      ease: "easeOut",
-    },
-  }}
-  className="absolute inset-0"
->
-  <Image
-    src="/images/hero-bg.png"
-    alt="Modern wooden house surrounded by nature"
-    fill
-    priority
-    sizes="100vw"
-    className="object-cover"
-  />
-</motion.div>
-        </div>
+<div className="hero-image mt-0 md:mt-9 relative w-[150%] h-full overflow-hidden origin-top"> {/* Ensure container has relative positioning and dimensions */}
+  <motion.div
+    initial={{ scale: 1.15, opacity: 0.3 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{
+      scale: {
+        duration: 3,
+        ease: [0.22, 1, 0.36, 1],
+      },
+      opacity: {
+        duration: 1.4,
+        ease: "easeOut",
+      },
+    }}
+    className="absolute inset-0"
+  >
+    <Image
+      src="/images/hero-bg.jpg"
+      alt="hero-backgrond"
+      fill
+      priority
+      sizes="100vw " 
+      className=" object-contain object-top" 
+    />
+  </motion.div>
+</div>
+
 
         {/* Left cream overlay */}
         <div className="hero-cream-panel" />
@@ -104,11 +96,12 @@ export default function Hero() {
               Statome išskirtinius rąstinius namus iš Karpatų eglės, naudodami kanadietišką „laukinio rąsto“ technologiją. Kiekvienas namas – unikalus meistrystės kūrinys, kuriame susijungia natūralios medienos grožis, ilgaamžiškumas ir jaukus mikroklimatas.
             </p>
 
-            <div className="hero-actions">
-              <Link href="/houses" className="primary-button uppercase tracking-[0.19em] whitespace-nowrap">
+            <div className="flex flex-col md:flex-row gap-5 md:gap-10 mx-auto mt-10">
+              <Link href="tel" className="primary-button uppercase tracking-[0.19em] whitespace-nowrap">
                 Paskambinti
                 <PhoneCall size={17} />
               </Link>
+              
 
               {/* <Link href="/about" className="story-button ">
                 <span className="play-icon">
@@ -116,13 +109,14 @@ export default function Hero() {
                 </span>
                 Mūsų projektai
               </Link> */}
-              <SecondaryButton name="Mūsų projektai"/>
+              <SecondaryButton name="Mūsų projektai" link="/projektai"/>
             </div>
           </motion.div>
 
           {/* FEATURE INDICATORS */}
+          
           <motion.div
-            className="hero-features"
+            className="hero-features "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -140,7 +134,8 @@ export default function Hero() {
                 </div>
               );
             })}
-          </motion.div>
+            </motion.div>
+        
         </div>
 
         {/* SCROLL INDICATOR */}

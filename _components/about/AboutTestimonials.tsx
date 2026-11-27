@@ -12,6 +12,7 @@ import {
   Quote,
   Pause,
   Play,
+  User2,
 } from "lucide-react";
 
 const AUTO_SLIDE_INTERVAL = 5000;
@@ -317,15 +318,18 @@ export default function AboutTestimonials() {
 
                 {/* Client profile */}
                 <div className="mt-8 flex items-center gap-4 border-t border-[#EAE5DC] pt-6">
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E9E3D8]">
-                    <Image
-                      src={testimonial.image}
-                      alt={`Kliento ${testimonial.name} nuotrauka`}
-                      fill
-                      sizes="48px"
-                      className="object-cover"
-                    />
-                  </div>
+                   {/* <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E9E3D8]">
+                            <Image
+                              src={testimonial.image}
+                              alt={`Kliento ${testimonial.name} nuotrauka`}
+                              fill
+                              sizes="48px"
+                              className="object-cover"
+                            />
+                          </div> */}
+                           <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ">
+                            <User2 size={48} strokeWidth={1} color="green"/>
+                          </div>
 
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-[#262626]">

@@ -10,10 +10,10 @@ const categories = [
   {
     number: "01",
     label: "GYVENIMUI",
-    title: "Gyvenamieji rąstiniai namai",
+    title: "Rąstiniai namai",
     description:
       "Namai, kuriuose norisi gyventi ištisas kartas. Iš masyvių Karpatų eglės rąstų statome individualius gyvenamuosius namus, išsiskiriančius natūraliu grožiu, tvirtumu ir jaukumu. Kiekvieną projektą pritaikome šeimos poreikiams ir gyvenimo būdui.",
-    image: "/images/bcc1.jpeg",
+    image: "/images/home1.jpg",
     alt: "Individualus rąstinis gyvenamasis namas gamtos apsuptyje",
     href: "/gyvenamieji-rastiniai-namai",
     
@@ -24,17 +24,17 @@ const categories = [
     title: "Rąstinės pirtys",
     description:
       "Tikra pirties patirtis prasideda nuo natūralių medžiagų. Statome autentiškas rąstines pirtis, kuriose medienos aromatas, išskirtinė atmosfera ir tradicinė meistrystė sukuria ypatingą poilsio erdvę.",
-    image: "/images/bcc2.jpeg",
+    image: "/images/home2.jpg",
     alt: "Tradicinė rąstinė pirtis natūralioje aplinkoje",
     href: "/rastines-pirtys",
   },
   {
     number: "03",
     label: "POILSIUI GAMTOJE",
-    title: "Poilsio namai ir sodybos",
+    title: "Poilsio sodybos",
     description:
       "Vieta, į kurią norisi sugrįžti. Kuriame išskirtinius rąstinius poilsio namus ir sodybas, harmoningai įsiliejančius į gamtinę aplinką. Nuo jaukaus savaitgalio namelio iki erdvios šeimos sodybos ar turizmo komplekso.",
-    image: "/images/bcc3.jpeg",
+    image: "/images/home3.jpg",
     alt: "Rąstinis poilsio namas žalios gamtos apsuptyje",
     href: "/poilsio-namai-ir-sodybos",
   },
@@ -139,7 +139,7 @@ const imageReveal = {
             Mūsų statiniai
           </span>
 
-          <h2 className="font-heading text-3xl font-medium leading-[1.2] tracking-tight text-[#262626] sm:text-4xl md:text-5xl">
+          <h2 className="font-heading text-3xl font-medium leading-[1] tracking-tight text-[#262626] sm:text-4xl md:text-5xl">
             Natūralus medis.
             <span className="block text-[#2F4A3B]">
               Išskirtiniai sprendimai.
@@ -170,7 +170,6 @@ const imageReveal = {
                 src={category.image}
                 alt={category.alt}
                 fill
-                priority={index === 0}
                 sizes={
                   "(max-width: 768px) 100vw, 45vw"
                 }
@@ -189,7 +188,7 @@ const imageReveal = {
               <div className="relative z-10 flex h-full min-h-[310px] flex-col justify-center px-7 py-9 sm:min-h-[350px] sm:px-9 lg:min-h-[430px] lg:px-10">
                       <div className={"max-w-[99%] sm:max-w-[98%] lg:max-w-[98%]"}>
                   {/* Category label */}
-                  <div className="mb-3 flex items-center gap-3">
+                  <div className=" flex items-center gap-3">
                     <span className="absolute top-8 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#D9A66C] sm:text-[11px]">
                       {category.label}
                     </span>
@@ -198,20 +197,19 @@ const imageReveal = {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-2xl min-h-0 md:min-h-0 font-medium leading-tight tracking-[-0.025em] text-white sm:text-3xl lg:text-[34px]">
+                  <h3 className="font-serif absolute mb-7 md:mb-0  text-2xl top-25 font-medium leading-tight tracking-[-0.025em] text-white sm:text-3xl lg:text-[34px]">
                     {category.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-7 w-full text-justify text-xs leading-6 text-white/90 sm:text-base  sm:leading-6">
+                  <p className={`w-full  text-justify text-sm leading-6 text-white/90 sm:text-base ${index===1 ? "mt-4" : "mt-16"}  sm:leading-6`}>
                     {category.description}
                   </p>
                 </div>
 
                 {/* Arrow link */}
                 <Link
-                  href={category.href}
-                  aria-label={`Atraskite: ${category.title}`}
+                  href={'/technologija-ir-gamyba'}
                   className="absolute bottom-7 right-7 flex h-11 w-11 items-center justify-center rounded-full border border-white/70 text-white transition-all duration-300 hover:border-[#D9A66C] hover:bg-[#D9A66C] hover:text-[#22291F] sm:bottom-8 sm:right-8 sm:h-12 sm:w-12"
                 >
                   <ArrowRight

@@ -130,7 +130,7 @@ export default function LogSaunas() {
         >
           <div className="relative aspect-[5/4] sm:aspect-[16/8] lg:aspect-[16/7]">
             <Image
-              src="/images/bc3.jpg"
+              src="/images/homes/namai2.png"
               alt="Natūralių Karpatų eglės rąstų pirtis gamtos apsuptyje"
               fill
               sizes="100vw"

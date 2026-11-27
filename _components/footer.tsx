@@ -10,6 +10,7 @@ import {
   ArrowUp,
 } from "lucide-react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const navigation = [
   { label: "Pagrindinis", href: "/" },
@@ -52,12 +53,16 @@ export default function Footer() {
             <Link
               href="/"
               aria-label="Laukinis rąstas – pagrindinis puslapis"
-              className="inline-flex flex-col"
+              className="inline-flex flex-col relative"
             >
-              <span className="font-serif text-3xl font-semibold tracking-tight text-white">
-                Laukinis rąstas
-              </span>
-              
+               <Image
+                         width="200"
+                         height="100"
+                         alt="logo"
+                         src={"/images/header-logo.png"}
+                       
+                         className=" w-full"
+                       />
             </Link>
 
             <p className="mt-6 text-sm leading-8 text-white/65">
@@ -69,7 +74,7 @@ export default function Footer() {
             {/* Social links */}
            <div className="mt-8 flex items-center gap-3">
   <a
-    href="YOUR_FACEBOOK_URL"
+    href="https://www.facebook.com/laukinisrastas"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"
@@ -79,7 +84,9 @@ export default function Footer() {
   </a>
 
   <a
-    href="YOUR_INSTAGRAM_URL"
+    href="
+https://www.instagram.com/laukinis_rastas/
+"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -197,10 +204,10 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="/slapuku-politika"
+                href="/naudojimo-taisykles"
                 className="text-xs text-white/45 transition-colors hover:text-white"
               >
-                Slapukų politika
+                Naudojimo taisyklės  
               </Link>
 
               <a

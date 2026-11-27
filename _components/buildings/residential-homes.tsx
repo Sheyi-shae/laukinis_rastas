@@ -79,7 +79,7 @@ export default function ResidentialHomes() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm sm:aspect-[5/4] lg:aspect-[3/6]">
               <Image
-                src="/images/res.jpg"
+                src="/images/homes/namai1.jpg"
                 alt="Individualus rąstinis gyvenamasis namas gamtos apsuptyje"
                 fill
                 priority={false}

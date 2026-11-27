@@ -11,6 +11,7 @@ import {
   Quote,
   Pause,
   Play,
+  User2,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -255,20 +256,20 @@ export default function Testimonials() {
 
       <div className="container">
         {/* Section heading */}
-        <div className="mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row justify-center items-center ">
           <motion.div
             initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7 }}
-            className="max-w-2xl"
+            className="max-w-2xl f"
           >
-            <span className="mb-4 inline-flex items-center gap-3 text-xs md:text-base font-bold tracking-[0.22em] text-[#788C6A]">
+            <span className="mb-4  text-center justify-center flex items-center gap-3 text-xs md:text-base font-bold tracking-[0.22em] text-[#788C6A]">
              
               KLIENTŲ ATSILIEPIMAI
             </span>
 
-            <h2 className="text-4xl font-semibold leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
+            <h2 className="text-4xl text-center font-semibold leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-6xl">
               Mūsų darbai kalba{" "}
               <span className="font-serif font-normal italic text-[#788C6A]">
                 patys už save.
@@ -276,16 +277,7 @@ export default function Testimonials() {
             </h2>
           </motion.div>
 
-          <motion.p
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="hidden md:block absolute right-10 max-w-md text-base top-36 leading-8 text-slate-700 lg:pb-1"
-          >
-            {/* O geriausias jų įvertinimas – klientų pasitikėjimas ir
-            rekomendacijos. */}
-          </motion.p>
+        
         </div>
 
          {/* Carousel heading and controls */}
@@ -362,7 +354,7 @@ export default function Testimonials() {
         
                         {/* Client profile */}
                         <div className="mt-8 flex items-center gap-4 border-t border-[#EAE5DC] pt-6">
-                          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E9E3D8]">
+                          {/* <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-[#E9E3D8]">
                             <Image
                               src={testimonial.image}
                               alt={`Kliento ${testimonial.name} nuotrauka`}
@@ -370,6 +362,9 @@ export default function Testimonials() {
                               sizes="48px"
                               className="object-cover"
                             />
+                          </div> */}
+                           <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full ">
+                            <User2 size={48} strokeWidth={1} color="green"/>
                           </div>
         
                           <div className="min-w-0">

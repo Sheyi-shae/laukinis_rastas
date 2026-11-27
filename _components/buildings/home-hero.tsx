@@ -22,7 +22,7 @@ export default function HomesHero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/images/homes/home-hero.jpg"
+          src="/images/home1.jpg"
           alt="Išskirtinis rąstinis namas gamtos apsuptyje"
           fill
           priority

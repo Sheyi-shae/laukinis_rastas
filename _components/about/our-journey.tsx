@@ -243,7 +243,7 @@ export default function OurJourney() {
             palieka savo pėdsaką.
           </p>
 
-          <PrimaryButton name=" Susipažinkite su mūsų darbais"/>
+          <PrimaryButton name=" Susipažinkite su mūsų darbais" link=""/>
         </motion.div>
       </div>
     </section>

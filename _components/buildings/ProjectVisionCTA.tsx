@@ -101,7 +101,7 @@ export default function ProjectVisionCTA() {
           >
             <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="/images/homes/project-vision.jpg"
+                src="/images/homes/namai4.jpg"
                 alt="Išskirtinis individualios architektūros rąstinis namas"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

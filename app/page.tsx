@@ -4,7 +4,9 @@ import CompletedProjects from "@/_components/home/completed-projects";
 import HowItWorks from "@/_components/home/how-it-works";
 import Testimonials from "@/_components/home/testimonial";
 import VisitWorkshop from "@/_components/home/visit-our-workshop";
+import VisitShowroom from "@/_components/home/visit-showroom";
 import WhyChooseUs from "@/_components/home/why-choose-us";
+import HomepageCTA from "@/_components/HomepageCta";
 export default function Home() {
   return (
     <div>
@@ -14,7 +16,9 @@ export default function Home() {
       <HowItWorks />
       <CompletedProjects />
       <Testimonials />
-      <VisitWorkshop/>
+      <VisitWorkshop />
+      <HomepageCTA />
+      <VisitShowroom/>
       </div>
   );
 }
