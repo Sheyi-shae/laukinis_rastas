@@ -3,11 +3,9 @@
 
 import {
   ArrowUpRight,
-  Facebook,
-  Instagram,
   Mail,
   MapPin,
-  Phone,
+  Phone
 } from "lucide-react";
 
 const workshopAddress = "Mokslininkų g. 12, 08412 Vilnius, Lietuva";

@@ -8,7 +8,44 @@ import RaimondaProject from '@/_components/projects/RaimondaProject'
 import RuslanasProject from '@/_components/projects/RuslanasProject'
 import WorkshopCTA from '@/_components/tech-production/WorkshopCTA'
 import React from 'react'
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Įgyvendinti rąstinių namų ir pirčių projektai",
+
+  description:
+    "Peržiūrėkite įgyvendintus Laukinio rąsto projektus: rąstinius namus, pirtis ir poilsio pastatus. Atraskite natūralaus medžio grožį, meistrystę ir individualius sprendimus.",
+
+  alternates: {
+    canonical: "https://laukinisrastas.lt/projektai",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "lt_LT",
+    url: "https://laukinisrastas.lt/projektai",
+    siteName: "Laukinis rąstas",
+    title: "Įgyvendinti projektai | Laukinis rąstas",
+    description:
+      "Susipažinkite su mūsų įgyvendintais rąstinių namų, pirčių ir poilsio pastatų projektais. Tikri darbai, natūrali mediena ir kruopšti meistrystė.",
+    images: [
+      {
+        url: "/images/projects/projects-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Laukinis rąstas – įgyvendinti rąstinių namų projektai",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Įgyvendinti projektai | Laukinis rąstas",
+    description:
+      "Rąstiniai namai, pirtys ir poilsio pastatai – tikri Laukinio rąsto darbai.",
+    images: ["/images/projects/projects-hero.jpg"],
+  },
+};
 export default function page() {
   return (
     <div>

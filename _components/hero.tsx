@@ -97,7 +97,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col md:flex-row gap-5 md:gap-10 mx-auto mt-10">
-              <Link href="tel" className="primary-button uppercase tracking-[0.19em] whitespace-nowrap">
+              <Link href="tel:+37069341243" className="primary-button uppercase tracking-[0.19em] whitespace-nowrap">
                 Paskambinti
                 <PhoneCall size={17} />
               </Link>

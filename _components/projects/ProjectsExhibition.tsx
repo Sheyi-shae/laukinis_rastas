@@ -22,7 +22,7 @@ export default function ProjectsExhibition() {
     },
   };
 
-  const imageReveal = {
+  const imageReveal:Variants = {
     hidden: { opacity: 0, scale: 1.04 },
     visible: {
       opacity: 1,

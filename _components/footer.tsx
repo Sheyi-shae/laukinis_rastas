@@ -13,22 +13,23 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 
 const navigation = [
-  { label: "Pagrindinis", href: "/" },
   { label: "Apie mus", href: "/apie-mus" },
-  { label: "Mūsų darbai", href: "/projektai" },
-  { label: "Kaip dirbame", href: "/#procesas" },
+  { label: "Mūsų darbai", href: "/projektai#projektu-galerija" },
+  { label: "Namai ir statiniai", href: "/namai-ir-statiniai" },
+    { label: "Įgyvendinti projektai", href: "/#projektai" },
+  { label: "Technologijos ir gamyba", href: "/technologija-ir-gamyba" },
   { label: "Kontaktai", href: "/kontaktai" },
 ];
 
 const categories = [
   {
     label: "Gyvenamieji rąstiniai namai",
-    href: "/gyvenamieji-rastiniai-namai",
+    href: "/namai-ir-statiniai#gyvenamieji-namai",
   },
-  { label: "Rąstinės pirtys", href: "/rastines-pirtys" },
+  { label: "Rąstinės pirtys", href: "/namai-ir-statiniai#rastines-pirtys" },
   {
     label: "Poilsio namai ir sodybos",
-    href: "/poilsio-namai-ir-sodybos",
+    href: "/namai-ir-statiniai#rastines-pirtys",
   },
 ];
 
@@ -65,7 +66,7 @@ export default function Footer() {
                        />
             </Link>
 
-            <p className="mt-6 text-sm leading-8 text-white/65">
+            <p className="mt-6 text-sm md:text-base text-justify leading-8 text-white/65">
               Kuriame išskirtinius rąstinius namus iš Karpatų kalnų eglės,
               derindami kanadietišką „laukinio rąsto“ technologiją,
               natūralų medienos grožį ir ilgametę meistrystę.
@@ -178,7 +179,7 @@ https://www.instagram.com/laukinis_rastas/
               </Link>
 
               <Link
-                href="/kontaktai"
+                href="mailto:info@laukinisrastas.lt"
                 className="flex items-center gap-3 text-sm text-white/65 transition-colors hover:text-white"
               >
                 <Mail size={17} className="shrink-0 text-[#B8875B]" />

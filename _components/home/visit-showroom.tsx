@@ -79,7 +79,7 @@ export default function VisitShowroom() {
    
                {/* CTA */}
                <div className="mt-8">
-                 <PrimaryButton link="#" name="Apsilankykite mūsų ekspozicijų salėje"/>
+                 <PrimaryButton link="https://maps.google.com/?cid=2534470294559763390&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF" name="Apsilankykite mūsų ekspozicijų salėje"/>
    
                  
                </div>

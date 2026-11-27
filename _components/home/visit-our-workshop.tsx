@@ -140,7 +140,8 @@ meistrai rankomis formuoja jų jungtis ir kaip iš atskirų rąstų gimsta unika
 
             {/* CTA */}
             <div className="mt-8">
-              <button
+              <a
+                href="/kontaktai"
                 
                 className="group inline-flex min-h-[58px] items-center justify-between gap-8 bg-primary px-7 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#243A2F]"
               >
@@ -149,7 +150,7 @@ meistrai rankomis formuoja jų jungtis ir kaip iš atskirų rąstų gimsta unika
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-white group-hover:text-[#2F4A3B]">
                   <ArrowUpRight size={17} />
                 </span>
-              </button>
+              </a>
 
               <p className="mt-4 flex items-center gap-2 text-xs text-[#85877F]">
                 <CalendarDays size={14} />

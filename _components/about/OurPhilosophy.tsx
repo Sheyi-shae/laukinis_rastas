@@ -199,7 +199,7 @@ export default function OurPhilosophy() {
 
          
                    
-                      <SecondaryButton name="Susipažinkite su mūsų technologija" link=""/>
+                      <SecondaryButton name="Susipažinkite su mūsų technologija" link="/technologija-ir-gamyba"/>
           </div>
         </motion.div>
       </div>
