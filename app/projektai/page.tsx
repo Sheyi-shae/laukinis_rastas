@@ -9,6 +9,7 @@ import RuslanasProject from '@/_components/projects/RuslanasProject'
 import WorkshopCTA from '@/_components/tech-production/WorkshopCTA'
 import React from 'react'
 import type { Metadata } from "next";
+import CompletedProjectsShowcase from '@/_components/projects/CompletedProjectsShowcase'
 
 export const metadata: Metadata = {
   title: "Įgyvendinti rąstinių namų ir pirčių projektai",
@@ -48,16 +49,33 @@ export const metadata: Metadata = {
 };
 export default function page() {
   return (
-    <div>
+    // <div>
+    //   <ProjectsHero />
+    //   <ProjectsNavigation />
+    //   <ProjectsExhibition />
+    //   <RaimondaProject />
+    //   <FredisProject />
+    //   <RuslanasProject />
+    //   <ProjectsGallery />
+    //   <Testimonials/>
+    //   <WorkshopCTA/>
+    // </div>
+     <main className="overflow-hidden">
       <ProjectsHero />
+
       <ProjectsNavigation />
-      <ProjectsExhibition />
-      <RaimondaProject />
-      <FredisProject />
-      <RuslanasProject />
-      <ProjectsGallery />
+
+      <div id="ekspozicija" className="scroll-mt-28">
+        <ProjectsExhibition />
+      </div>
+
+      <CompletedProjectsShowcase />
+
+      <div id="projektu-galerija" className="scroll-mt-28">
+        <ProjectsGallery />
+      </div>
       <Testimonials/>
       <WorkshopCTA/>
-    </div>
+    </main>
   )
 }

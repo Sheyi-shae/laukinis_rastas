@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Rąstiniai namai, pirtys ir poilsio pastatai iš laukinio rąsto. Natūrali mediena, kanadietiška technologija ir individualūs projektai.",
     images: [
       {
-        url: "/images/og/laukinis-rastas.jpg",
+        url: "/images/header-logo.png",
         width: 1200,
         height: 630,
         alt: "Laukinis rąstas – rąstinių namų statyba",
@@ -61,15 +61,15 @@ export const metadata: Metadata = {
     title: "Laukinis rąstas | Rąstinių namų statyba",
     description:
       "Rąstiniai namai, pirtys ir poilsio pastatai pagal kanadietišką technologiją.",
-    images: ["/images/og/laukinis-rastas.jpg"],
+    images: ["/images/header-logo.png"],
   },
 
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/apple-touch-icon.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/apple-touch-icon.png",
   },
 
   robots: {

@@ -60,7 +60,7 @@ export default function Footer() {
                          width="200"
                          height="100"
                          alt="logo"
-                         src={"/images/header-logo.png"}
+                         src={"/images/footer-l.png"}
                        
                          className=" w-full"
                        />

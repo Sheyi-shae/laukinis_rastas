@@ -4,9 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 const navigationItems = [
   { label: "Ekspozicija", href: "#ekspozicija" },
-  { label: "Raimondos namas", href: "#raimondos-namai" },
-  { label: "Fredžio kompleksas", href: "#fredzio-kompleksas" },
-  { label: "Ruslano pirtis", href: "#ruslano-pirtis" },
+  // { label: "Raimondos namas", href: "#raimondos-namai" },
+  // { label: "Fredžio kompleksas", href: "#fredzio-kompleksas" },
+  { label: "Įgyvendinti projektai", href: "#klientu-projektai" },
+ 
   { label: "Galerija", href: "#projektu-galerija" },
 ];
 
