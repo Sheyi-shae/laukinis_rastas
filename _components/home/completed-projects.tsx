@@ -31,7 +31,7 @@ const projects = [
   },
   {
     number: "03",
-    category: "Ruslan Stoniškės",
+    category: "Ruslan iš Stoniškių",
     title: "Rąstinio namo restauravimas",
     subtitle: "Naujas gyvenimas senai medinei architektūrai",
     description:

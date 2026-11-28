@@ -105,7 +105,7 @@ export default function OurStory() {
           >
             <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="/images/projects/fredis/3.jpg"
+                src="/images/projects/fredis/5.jpg"
                 alt="Pirmasis rąstinis namas, tapęs Laukinio rąsto istorijos pradžia"
                 fill
                 //sizes="(max-width: 1024px) 100vw, 45vw"

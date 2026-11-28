@@ -59,7 +59,6 @@ export const projects: Project[] = [
     images: [
        "/images/projects/fredis/1.jpg",
   "/images/projects/fredis/2.jpg",
-  "/images/projects/fredis/3.jpg",
     "/images/projects/fredis/4.jpg",
   "/images/projects/fredis/5.jpg",
     ],
@@ -68,7 +67,7 @@ export const projects: Project[] = [
   {
     id: "ruslanas",
     name: "Ruslanas",
-    title: "Nauja pirtis geresniam poilsiui",
+    title: " Pirtis geresniam poilsiui",
     location: "Stoniškiai, Lietuva",
     category: "Rąstinė pirtis",
     shortDescription:
