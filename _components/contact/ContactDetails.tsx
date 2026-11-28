@@ -145,7 +145,7 @@ export default function ContactDetails() {
 
                   <div>
                     <p className="text-xs text-[#81796E]">
-                      Dirbtuvių adresas
+                      Adresas
                     </p>
                     <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
                       {workshopAddress}
