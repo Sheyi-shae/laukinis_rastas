@@ -56,23 +56,21 @@ export default function WorkshopCTA() {
             {/* Eyebrow */}
             <div className="mb-6 flex items-center gap-3">
               <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
-                Aplankykite mūsų dirbtuves
+               Aplankykite mūsų pagrindinį biurą
               </span>
             </div>
 
             {/* Heading */}
             <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-[3.5rem]">
-              Pamatykite, kaip gimsta{" "}
+              Čia prasideda jūsų{" "}
               <span className="italic text-[#788C6A]">
-                jūsų būsimi namai.
+                būsimų namų istorija.
               </span>
             </h2>
 
             {/* Description */}
-            <p className="mt-7 text-sm leading-8 text-[#5F5A52] sm:text-base">
-              Apsilankymo metu galėsite įvertinti medienos kokybę, pamatyti
-              vykdomus projektus, susipažinti su gamybos procesu ir
-              tiesiogiai su meistrais aptarti savo būsimo namo viziją.
+            <p className="mt-7 text-justify text-sm leading-8 text-[#5F5A52] sm:text-base">
+             Apsilankymo metu galėsite susipažinti su mūsų įgyvendintais projektais, aptarti architektūrinius ir konstrukcinius sprendimus, įvertinti preliminarią statybos kainą bei kartu su mūsų specialistais suplanuoti savo būsimo namo įgyvendinimą.
             </p>
 
             {/* Contact information */}

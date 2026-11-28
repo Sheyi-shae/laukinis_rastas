@@ -106,12 +106,12 @@ export default function OurPhilosophy() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative min-h-[420px] overflow-hidden sm:min-h-[540px] lg:min-h-[650px]">
+            <div className="relative min-h-[420px] overflow-hidden sm:min-h-[540px] lg:min-h-[750px]">
               <Image
-                src="/images/bcc3.jpeg"
+                src="/images/projects/fredis/1.jpg"
                 alt="Meistrų rankomis formuojami natūralūs rąstai"
                 fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
+               // sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover transition-transform duration-1000 hover:scale-[1.04]"
               />
 

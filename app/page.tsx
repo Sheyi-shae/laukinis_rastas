@@ -7,6 +7,7 @@ import VisitWorkshop from "@/_components/home/visit-our-workshop";
 import VisitShowroom from "@/_components/home/visit-showroom";
 import WhyChooseUs from "@/_components/home/why-choose-us";
 import HomepageCTA from "@/_components/HomepageCta";
+import WorkshopCTA from "@/_components/tech-production/WorkshopCTA";
 export default function Home() {
   return (
     <div>
@@ -17,8 +18,9 @@ export default function Home() {
       <CompletedProjects />
       <Testimonials />
       <VisitWorkshop />
-      <HomepageCTA />
-      <VisitShowroom/>
+      {/* <HomepageCTA /> */}
+      <WorkshopCTA/>
+      {/* <VisitShowroom/> */}
       </div>
   );
 }

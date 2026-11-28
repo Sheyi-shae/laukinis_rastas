@@ -12,31 +12,7 @@ import {
 } from "lucide-react";
 
 const projects = [
-  {
-    image: "/images/projects/gallery/1.png",
-    title: "Gyvenamasis namas _Bulgarija",
-    category: "Gyvenamieji namai",
-  },
-  {
-    image: "/images/projects/gallery/2.png",
-    title: "Gyvenamasis namas _Rūtos Ižbuska",
-    category: "Pirtys",
-  },
-  {
-    image: "/images/projects/gallery/3.png",
-    title: "Gyvenamasis namas _Safari",
-    category: "Poilsio namai",
-  },
-  {
-      image: "/images/projects/gallery/4.png",
-    title: "Gyvenamasis namas _Šakotis_",
-    category: "Gyvenamieji namai",
-    },
-   {
-      image: "/images/projects/gallery/5.png",
-    title: "Gyvenamasis namas _Southburry_",
-    category: "Gyvenamieji namai",
-  },
+ 
   {
     image: "/images/projects/gallery/6.jpg",
     title: "Vadimo poilsio namai Malūnuose",
@@ -98,30 +74,7 @@ const projects = [
     category: "Įgyvendinti projektai",
     },
   
-  {
-    image: "/images/projects/gallery/18.png",
-    title: "Pirtis _Kanada_",
-    category: "Įgyvendinti projektai",
-    },
-  {
-    image: "/images/projects/gallery/19.png",
-    title: "Pirtis _Norvegiška_",
-    category: "Įgyvendinti projektai",
-    },
   
-  {
-    image: "/images/projects/gallery/20.png",
-    title: "Poilsio namai _Merkio svajonė_",
-    category: "Įgyvendinti projektai",
-  },{
-    image: "/images/projects/gallery/21.png",
-    title: "Svečių namelis _Balninkų lokys_",
-    category: "Įgyvendinti projektai",
-  },{
-    image: "/images/projects/gallery/22.png",
-    title: "Svečių namelis _Vilkas_",
-    category: "Įgyvendinti projektai",
-  },
 ];
 
 export default function ProjectsGallery() {

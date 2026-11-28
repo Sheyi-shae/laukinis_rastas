@@ -21,8 +21,8 @@ export default function ProjectsNavigation() {
       <div className="container">
         <div className="flex items-center justify-between gap-5">
           <div className="hidden shrink-0 items-center gap-2 py-5 lg:flex">
-            <span className="h-2 w-2 rounded-full bg-[#B8875B]" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B6F76]">
+            
+            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] text-[#6B6F76]">
               Mūsų projektai
             </span>
           </div>

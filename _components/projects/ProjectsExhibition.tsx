@@ -8,6 +8,9 @@ import {
   MapPin,
   CalendarDays,
   MoveUpRight,
+  PhoneCall,
+  Mail,
+  MailAlert,
 } from "lucide-react";
 
 export default function ProjectsExhibition() {
@@ -146,13 +149,24 @@ export default function ProjectsExhibition() {
             </div>
 
             {/* CTA */}
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col lg:flex-row gap-3">
               <Link
-                href="/kontaktai"
-                className="group/link inline-flex min-h-14 items-center gap-5 bg-[#2F4A3B] px-7 text-sm font-bold text-[#F7F5EE] transition-colors duration-300 hover:bg-[#788C6A]"
+                href="tel:+37069341243"
+                className="group/link inline-flex min-h-14 items-center gap-5 bg-[#2F4A3B] px-10 text-sm font-bold text-[#F7F5EE] transition-colors duration-300 hover:bg-[#788C6A]"
               >
-                Planuoti apsilankymą
-                <MoveUpRight
+                Skambinti
+                <PhoneCall
+                  size={17}
+                  className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
+                />
+              </Link>
+
+              <Link
+                href="mailto:info@laukinisrastas.lt"
+                className="group/link inline-flex min-h-14 items-center gap-5 bg-[#B8875B] px-7 text-sm font-bold text-[#F7F5EE] transition-colors duration-300 hover:bg-[#788C6A]"
+              >
+              Siųsti el. laišką
+                <Mail
                   size={17}
                   className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
                 />

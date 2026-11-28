@@ -1,40 +1,27 @@
 
 "use client";
 
+import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowUpRight,
+  CalendarDays,
+  Clock3,
   Mail,
   MapPin,
-  Phone
+  Phone,
+  Trees,
 } from "lucide-react";
 
-const workshopAddress = "Mokslininkų g. 12, 08412 Vilnius, Lietuva";
+const workshopAddress =
+  "Mokslininkų g. 12, 08412 Vilnius, Lietuva";
+
+const workshopEmail = "info@laukinisrastas.lt";
+const workshopPhone = "+370 693 41243";
 
 const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(
   workshopAddress
 )}&output=embed`;
-
-const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  workshopAddress
-)}`;
-
-const contactItems = [
-  {
-    icon: Phone,
-    label: "Telefonas",
-    value: "+370 693 41243",
-    href: "tel:+37069341243",
-    description: "Susisiekite tiesiogiai su mūsų komanda",
-  },
-  {
-    icon: Mail,
-    label: "El. paštas",
-    value: "info@laukinisrastas.lt",
-    href: "mailto:info@laukinisrastas.lt",
-    description: "Parašykite mums apie savo projektą",
-  },
-];
-
 const socialLinks = [
   {
     name: "Facebook",
@@ -49,189 +36,173 @@ const socialLinks = [
 ];
 
 export default function ContactDetails() {
+   const shouldReduceMotion = useReducedMotion();
   return (
-    <section
+
+      
+
+   <section
       id="kontaktine-informacija"
-      className="relative overflow-hidden bg-[#F7F5EE] py-20 sm:py-24 lg:py-32"
+      className="relative isolate overflow-hidden bg-[#E9DFD0] py-20 "
     >
-      {/* Decorative background */}
+      {/* Subtle decorative elements */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-20 h-[400px] w-[400px] rounded-full bg-[#D9C9B1]/20 blur-3xl"
+        className="pointer-events-none absolute -right-32 -top-32 -z-10 h-[500px] w-[500px] rounded-full border border-[#8B735B]/15"
       />
 
-      <div className="container relative">
-        {/* SECTION HEADING */}
-        <div className="mb-12 max-w-2xl lg:mb-16">
-          <span className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#788C6A] sm:text-sm">
-            <span className="h-px w-8 bg-[#B8875B]" />
-            Susisiekime
-          </span>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 bottom-0 -z-10 h-[350px] w-[350px] rounded-full border border-[#8B735B]/10"
+      />
 
-          <h2 className="font-serif text-3xl leading-tight tracking-tight text-[#262626] sm:text-4xl lg:text-5xl">
-            Pradėkime nuo jūsų{" "}
-            <span className="italic text-[#788C6A]">idėjos.</span>
-          </h2>
+      <div className="container">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 xl:gap-20">
 
-          <p className="mt-5 max-w-xl text-sm leading-7 text-[#6B6F76] sm:text-base">
-            Turite klausimų apie rąstinių namų statybą ar planuojate
-            savo projektą? Susisiekite su mumis arba apsilankykite
-            mūsų dirbtuvėse.
-          </p>
-        </div>
-
-        {/* TWO-COLUMN LAYOUT */}
-        <div className="grid items-stretch gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-          {/* LEFT COLUMN — MAP & ADDRESS */}
-          <div className="flex flex-col gap-6">
-            {/* MAP */}
-            <div className="group relative min-h-[320px] flex-1 overflow-hidden border border-[#E8E2D7] bg-[#E9E5DB] shadow-[0_20px_70px_rgba(38,38,38,0.05)] sm:min-h-[400px]">
-              <iframe
-                src={mapUrl}
-                title="Laukinio rąsto dirbtuvės žemėlapyje"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 h-full w-full border-0 grayscale-[15%] transition duration-700 group-hover:grayscale-0"
-              />
-
-              {/* MAP LOCATION LABEL */}
-              <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 bg-white/95 p-4 shadow-lg backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-auto sm:min-w-[280px]">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2F4A3B] text-white">
-                  <MapPin size={19} />
-                </span>
-
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#788C6A]">
-                    Aplankykite mus
-                  </p>
-                  <p className="mt-1 text-sm font-semibold text-[#262626]">
-                    Vilnius, Lietuva
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* ADDRESS CARD */}
-            <div className="flex flex-col justify-between gap-5 border border-[#E8E2D7] bg-white p-6 shadow-[0_12px_40px_rgba(38,38,38,0.03)] sm:flex-row sm:items-center sm:p-8">
-              <div className="flex items-start gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#F0EDE4] text-[#2F4A3B]">
-                  <MapPin size={19} />
-                </span>
-
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#788C6A]">
-                    Mūsų adresas
-                  </p>
-
-                  <p className="mt-2 text-sm font-medium leading-6 text-[#262626] sm:text-base">
-                    {workshopAddress}
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href={directionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#2F4A3B] transition hover:text-[#B8875B]"
-              >
-                Maršrutas
-                <ArrowUpRight
-                  size={17}
-                  className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </a>
-            </div>
-          </div>
-
-          {/* RIGHT COLUMN — CONTACT DETAILS */}
-          <div className="flex flex-col justify-between bg-[#243A2F] p-7 text-white sm:p-9 lg:p-11">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#C5B99F]">
-                Tiesioginis kontaktas
+          {/* LEFT COLUMN */}
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.75 }}
+            className="flex flex-col"
+          >
+            {/* Eyebrow */}
+            <div className="mb-6 flex items-center gap-3">
+              <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.22em] text-[#788C6A]">
+               Aplankykite mūsų pagrindinį biurą
               </span>
-
-              <h3 className="mt-5 max-w-md font-serif text-3xl leading-snug sm:text-4xl">
-                Mielai atsakysime į jūsų klausimus.
-              </h3>
-
-              <p className="mt-4 max-w-md text-sm leading-7 text-white/65">
-                Norite pasitarti dėl būsimo namo, pirties ar kito
-                medinio statinio? Mūsų komanda pasiruošusi padėti.
-              </p>
-
-              {/* PHONE & EMAIL */}
-              <div className="mt-10 space-y-8">
-                {contactItems.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="group flex items-start gap-4"
-                    >
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[#D9C9B1] transition duration-300 group-hover:border-[#D9C9B1]/50 group-hover:bg-white/10">
-                        <Icon size={20} strokeWidth={1.6} />
-                      </span>
-
-                      <span className="min-w-0 flex-1">
-                        <span className="block text-xs text-white/50">
-                          {item.label}
-                        </span>
-
-                        <span className="mt-1 block break-words text-lg font-medium text-white transition group-hover:text-[#D9C9B1] sm:text-xl">
-                          {item.value}
-                        </span>
-
-                        <span className="mt-1 block text-xs leading-5 text-white/45">
-                          {item.description}
-                        </span>
-                      </span>
-
-                      <ArrowUpRight
-                        size={18}
-                        className="mt-2 shrink-0 text-white/40 transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#D9C9B1]"
-                      />
-                    </a>
-                  );
-                })}
-              </div>
             </div>
 
-            {/* SOCIAL MEDIA */}
-            <div className="mt-12 border-t border-white/15 pt-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C5B99F]">
-                Sekite mūsų darbus
-              </p>
+            {/* Heading */}
+            <h2 className="font-serif text-4xl leading-[1.12] tracking-tight text-[#262626] sm:text-5xl lg:text-[3.5rem]">
+              Čia prasideda jūsų{" "}
+              <span className="italic text-[#788C6A]">
+                būsimų namų istorija.
+              </span>
+            </h2>
 
-              <p className="mt-3 text-sm leading-6 text-white/60">
-                Atraskite mūsų projektus, darbų akimirkas ir
-                natūralios medienos grožį socialiniuose tinkluose.
-              </p>
+            {/* Description */}
+            <p className="mt-7 text-justify text-sm leading-8 text-[#5F5A52] sm:text-base">
+             Apsilankymo metu galėsite susipažinti su mūsų įgyvendintais projektais, aptarti architektūrinius ir konstrukcinius sprendimus, įvertinti preliminarią statybos kainą bei kartu su mūsų specialistais suplanuoti savo būsimo namo įgyvendinimą.
+            </p>
 
-             <div className="mt-6 flex flex-wrap gap-3">
-  {socialLinks.map((social) => (
-    <a
-      key={social.name}
-      href={social.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Laukinis rąstas – ${social.name}`}
-      className="group inline-flex items-center gap-3 border border-white/20 px-5 py-3 text-sm font-medium text-white transition duration-300 hover:border-[#D9C9B1] hover:bg-[#D9C9B1] hover:text-[#243A2F]"
-    >
-      {social.icon === "facebook" ? (
-        <svg
+            {/* Contact information */}
+            <div className="mt-10 border-t border-[#8B735B]/25 pt-8">
+              <h4 className="mb-6 font-serif text-xl md:text-2xl text-[#262626]">
+                Susisiekite dėl apsilankymo
+              </h4>
+
+              <div className="space-y-5">
+                {/* Phone */}
+                <a
+                  href={`tel:${workshopPhone.replace(/\s/g, "")}`}
+                  className="group flex items-center gap-4"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8B735B]/25 bg-[#F7F5EE]/60 text-[#2F4A3B] transition-all duration-300 group-hover:border-[#2F4A3B] group-hover:bg-[#2F4A3B] group-hover:text-white">
+                    <Phone size={18} strokeWidth={1.5} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-[#81796E]">
+                      Telefonas
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
+                      {workshopPhone}
+                    </p>
+                  </div>
+                </a>
+
+                {/* Email */}
+                <a
+                  href={`mailto:${workshopEmail}`}
+                  className="group flex items-center gap-4"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8B735B]/25 bg-[#F7F5EE]/60 text-[#2F4A3B] transition-all duration-300 group-hover:border-[#2F4A3B] group-hover:bg-[#2F4A3B] group-hover:text-white">
+                    <Mail size={18} strokeWidth={1.5} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-[#81796E]">
+                      El. paštas
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
+                      {workshopEmail}
+                    </p>
+                  </div>
+                </a>
+
+                {/* Address */}
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Mokslinink%C5%B3+g.+12%2C+08412+Vilnius%2C+Lietuva"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8B735B]/25 bg-[#F7F5EE]/60 text-[#2F4A3B] transition-all duration-300 group-hover:border-[#2F4A3B] group-hover:bg-[#2F4A3B] group-hover:text-white">
+                    <MapPin size={18} strokeWidth={1.5} />
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-[#81796E]">
+                      Dirbtuvių adresas
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
+                      {workshopAddress}
+                    </p>
+                  </div>
+
+                  <ArrowUpRight
+                    size={16}
+                    className="ml-auto shrink-0 text-[#8B735B] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
+                </a>
+
+                {/* facebook */}
+                
+                <a
+                  href="https://www.facebook.com/laukinisrastas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8B735B]/25 bg-[#F7F5EE]/60 text-[#2F4A3B] transition-all duration-300 group-hover:border-[#2F4A3B] group-hover:bg-[#2F4A3B] group-hover:text-white">
+                    <svg
           viewBox="0 0 24 24"
           className="h-[18px] w-[18px] fill-current"
           aria-hidden="true"
         >
           <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2H7.3V13h2.8v8h3.4Z" />
         </svg>
-      ) : (
-        <svg
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-[#81796E]">
+                     
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
+                       Facebook
+                    </p>
+                  </div>
+
+                  <ArrowUpRight
+                    size={16}
+                    className="ml-auto shrink-0 text-[#8B735B] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
+                </a>
+
+
+                {/* instagram */}
+
+                
+                <a
+                  href="https://www.instagram.com/laukinis_rastas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#8B735B]/25 bg-[#F7F5EE]/60 text-[#2F4A3B] transition-all duration-300 group-hover:border-[#2F4A3B] group-hover:bg-[#2F4A3B] group-hover:text-white">
+                     <svg
           viewBox="0 0 24 24"
           className="h-[18px] w-[18px] fill-none stroke-current"
           strokeWidth="1.8"
@@ -243,21 +214,84 @@ export default function ContactDetails() {
           <circle cx="12" cy="12" r="4" />
           <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
         </svg>
-      )}
+                  </div>
 
-      {social.name}
+                  <div>
+                    <p className="text-xs text-[#81796E]">
+                     
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-[#34352F] transition-colors group-hover:text-[#788C6A]">
+                       Instagram
+                    </p>
+                  </div>
 
-      <ArrowUpRight
-        size={15}
-        className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-      />
-    </a>
-  ))}
-</div>
+                  <ArrowUpRight
+                    size={16}
+                    className="ml-auto shrink-0 text-[#8B735B] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
+
+            
+          </motion.div>
+
+          {/* RIGHT COLUMN — GOOGLE MAP */}
+          <motion.div
+            initial={shouldReduceMotion ? false : { opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.75, delay: 0.1 }}
+            className="relative"
+          >
+            <div className="relative min-h-[420px] overflow-hidden border border-[#8B735B]/20 bg-[#F7F5EE] shadow-[0_20px_60px_rgba(65,49,30,0.12)] sm:min-h-[500px] lg:min-h-[750px]">
+              <iframe
+                title="Laukinio rąsto dirbtuvių vieta Vilniuje"
+                src={mapUrl}
+                width="100%"
+                height="100%"
+                style={{
+                  border: 0,
+                  position: "absolute",
+                  inset: 0,
+                }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+
+              {/* Map location card */}
+              <div className="pointer-events-none absolute bottom-4 left-4 right-4 z-10 sm:bottom-6 sm:left-6 sm:right-6">
+                <div className="flex items-center gap-4 border border-[#E9DFD0] bg-[#F7F5EE]/95 p-4 shadow-lg backdrop-blur-md sm:p-5">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#2F4A3B] text-white">
+                    <Trees size={20} strokeWidth={1.5} />
+                  </div>
+
+                  <div className="min-w-0">
+                    <p className="font-serif text-lg text-[#262626]">
+                      Laukinio rąsto dirbtuvės
+                    </p>
+                    <p className="mt-1 text-xs text-[#6B6F76]">
+                      {workshopAddress}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative corner */}
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -right-4 -z-10 h-28 w-28 border-b border-r border-[#B8875B]/60"
+            />
+          </motion.div>
         </div>
       </div>
     </section>
+
+
+
+  
+
   );
 }

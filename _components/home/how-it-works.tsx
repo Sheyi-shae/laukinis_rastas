@@ -293,7 +293,7 @@ export default function HowItWorks() {
 >
   {/* Background image */}
   <Image
-    src="/images/process/cta-bg.jpg"
+    src="/images/home3.jpg"
     alt=""
     fill
     sizes="(max-width: 1024px) 100vw, 1200px"

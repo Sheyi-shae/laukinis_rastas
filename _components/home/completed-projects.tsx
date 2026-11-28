@@ -9,34 +9,34 @@ import { ArrowUpRight, ArrowRight } from "lucide-react";
 const projects = [
   {
     number: "01",
-    category: "GYVENAMASIS NAMAS",
+    category: "Raimonda iš Jurbarko",
     title: "Individualus rąstinis namas „Kaspėdai“",
     subtitle: "Tradicinė meistrystė ir įspūdinga rąstų konstrukcija",
     description:
       "Šiame projekte atsiskleidžia tikroji „laukinio rąsto“ technologijos vertė – masyvūs natūralūs rąstai, kruopščiai formuojamos jungtys ir išraiškinga pastato konstrukcija. Kiekvienas elementas individualiai pritaikomas, siekiant sukurti tvirtą, ilgaamžį ir savito charakterio namą.",
-    image: "/images/home1.jpg",
+    image: "/images/projects/raimonda/1.jpg",
     imageAlt: "Individualus rąstinis namas Kaspėdai",
     href: "/projektai/kaspedai",
   },
   {
     number: "02",
-    category: "ŠIUOLAIKINĖ ARCHITEKTŪRA",
+    category: "Fredis iš Tartu",
     title: "Individualus rąstinis namas „Šilagėlė“",
     subtitle: "Natūralios medienos grožis ir šiuolaikinis komfortas",
     description:
       "Individualios architektūros rąstinis namas, kuriame masyvios medienos konstrukcijos dera su dideliais langais, erdviu išplanavimu ir natūralia aplinka. Projektas atskleidžia, kaip tradicinė rąstinių namų statyba gali būti pritaikyta šiuolaikiniam gyvenimo būdui.",
-    image: "/images/project2.png",
+    image: "/images/projects/fredis/1.jpg",
     imageAlt: "Individualus rąstinis namas Šilagėlė",
     href: "/projektai/silagele",
   },
   {
     number: "03",
-    category: "RESTAURAVIMAS",
+    category: "Ruslan Stoniškės",
     title: "Rąstinio namo restauravimas",
     subtitle: "Naujas gyvenimas senai medinei architektūrai",
     description:
       "Rąstinio pastato atnaujinimo darbai, kuriuose ypatingas dėmesys skiriamas medinių konstrukcijų būklei ir jų išsaugojimui. Projektas demonstruoja medienos apdirbimo patirtį bei gebėjimą dirbti ne tik su naujais, bet ir su esamais rąstiniais statiniais.",
-    image: "/images/project3.png",
+    image: "/images/projects/ruslan/1.jpg",
     imageAlt: "Restauruojamas istorinis rąstinis pastatas",
     href: "/projektai/restauravimas",
   },
@@ -126,7 +126,7 @@ export default function CompletedProjects() {
                   {project.number}
                 </span>
                 <span className="h-px w-8 bg-white/70" />
-                <span className="text-[10px] font-semibold tracking-[0.16em] text-white/90">
+                <span className="text-[10px] uppercase font-semibold tracking-[0.16em] text-white/90">
                   {project.category}
                 </span>
               </div>

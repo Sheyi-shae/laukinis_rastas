@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const workshopAddress =
-  "Antalaušių kaimas, Ukmergės rajonas, LT-20379.";
+  "Mokslininkų g. 12, 08412 Vilnius, Lietuva";
 
 const workshopEmail = "info@laukinisrastas.lt";
 const workshopPhone = "+370 693 41243";

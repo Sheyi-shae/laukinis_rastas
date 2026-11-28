@@ -132,9 +132,7 @@ export default function HolidayHomes() {
 
             <div className="absolute bottom-0 left-0 right-0 flex flex-col gap-5 p-6 sm:flex-row sm:items-end sm:justify-between sm:p-10 lg:p-12">
               <div className="max-w-2xl">
-                <span className="mb-3 block text-[10px] font-semibold tracking-[0.25em] text-white/75 uppercase">
-                  Gyvenimas gamtos ritmu
-                </span>
+              
                 <h3 className="font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
                   Daugiau nei poilsio namas.
                   <br className="hidden sm:block" /> Tai jūsų vieta pabėgti.

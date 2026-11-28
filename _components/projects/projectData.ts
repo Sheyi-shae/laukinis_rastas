@@ -43,7 +43,7 @@ export const projects: Project[] = [
     name: "Fredis",
     title: "Daugiau nei namai",
     location: "Tartu, Estija",
-    category: "Rąstinių pastatų kompleksas",
+    category: "Poilsio namai virtę verslu",
     shortDescription:
       "Gyvenimo, poilsio ir verslo erdvė, kurioje dera natūrali mediena ir funkcionalumas.",
 
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   {
     id: "ruslanas",
     name: "Ruslanas",
-    title: "Poilsio akimirkoms savo namuose",
+    title: "Nauja pirtis geresniam poilsiui",
     location: "Stoniškiai, Lietuva",
     category: "Rąstinė pirtis",
     shortDescription:

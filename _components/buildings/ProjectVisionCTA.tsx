@@ -111,9 +111,7 @@ export default function ProjectVisionCTA() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#17271E]/65 via-transparent to-transparent" />
 
               <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
-                <span className="mb-3 block text-[10px] font-semibold tracking-[0.25em] text-white/70 uppercase">
-                  Jūsų idėja. Mūsų meistrystė.
-                </span>
+                
                 <p className="max-w-sm font-serif text-2xl leading-snug text-white sm:text-3xl">
                   Sukurkime namus, kurie pasakoja jūsų istoriją.
                 </p>

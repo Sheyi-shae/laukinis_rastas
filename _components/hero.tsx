@@ -22,7 +22,7 @@ subtitle: "ir tvarus",
 },
 {
 icon: ShieldCheck,
-title: "Ilgaamžiai namai gyvenimui ir poilsiui",
+title: "Ilgaamžiai namai šimtmečiams",
 subtitle: "konstrukcija",
 },
 {
@@ -129,7 +129,7 @@ export default function Hero() {
 
                   <div>
                     <strong>{feature.title}</strong>
-                    <span>{feature.subtitle}</span>
+                   
                   </div>
                 </div>
               );

@@ -2,7 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowRight } from "lucide-react";
 
@@ -44,7 +43,7 @@ export default function ProjectsHero() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/85 sm:text-lg sm:leading-9">
-            Kiekvienas namas turi savo istoriją. Atraskite mūsų įgyvendintus
+         Atraskite mūsų įgyvendintus
             projektus, kuriuose susitinka natūralus medienos grožis,
             individualios vizijos ir meistrų rankų darbas.
           </p>

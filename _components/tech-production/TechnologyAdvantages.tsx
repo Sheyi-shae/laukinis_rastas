@@ -181,7 +181,7 @@ export default function TechnologyAdvantages() {
 
     {/* Background image */}
     <Image
-      src="/images/technology/tech4.jpeg"
+      src="/images/projects/raimonda/4.jpg"
       alt="Individualios architektūros rąstinis namas iš natūralių masyvių rąstų"
       fill
       sizes="100vw"
