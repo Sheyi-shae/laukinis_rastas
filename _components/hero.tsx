@@ -17,7 +17,7 @@ import { SecondaryButton } from "./primary-button";
 const features = [
 {
 icon: Leaf,
-title: "Autentiškas rąstinių namų grožis",
+title: "Nesenstantis medžo grožis",
 subtitle: "ir tvarus",
 },
 {
