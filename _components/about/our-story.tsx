@@ -103,7 +103,7 @@ export default function OurStory() {
             transition={{ duration: 0.85 }}
             className="relative lg:sticky lg:top-28"
           >
-            <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-[5/7]">
               <Image
                 src="/images/projects/fredis/5.jpg"
                 alt="Pirmasis rąstinis namas, tapęs Laukinio rąsto istorijos pradžia"
