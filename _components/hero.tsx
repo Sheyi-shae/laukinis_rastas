@@ -17,7 +17,7 @@ import { SecondaryButton } from "./primary-button";
 const features = [
 {
 icon: Leaf,
-title: "Nesenstantis medžo grožis",
+title: "Nesenstantis medžio grožis",
 subtitle: "ir tvarus",
 },
 {
